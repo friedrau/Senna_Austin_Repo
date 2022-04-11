@@ -1,5 +1,5 @@
 CC = g++ -std=c++11
-exe_file = Senna_Titcomb_Austin_Friedrich_exe
+exe_file = Senna_Titcomb_Austin_Friedrich_AIA1.exe
 $(exe_file): bfs.o dfs.o iddfs.o astar.o  Senna_Titcomb_Austin_Friedrich_AIA1.o
 	$(CC) bfs.o dfs.o iddfs.o astar.o Senna_Titcomb_Austin_Friedrich_AIA1.o -o $(exe_file)
 bfs.o: bfs.cpp bfs.h
