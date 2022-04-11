@@ -2,6 +2,10 @@
 #include <fstream>
 #include <string>
 #include <stdio.h>
+#include "bfs.h"
+#include "dfs.h"
+#include "iddfs.h"
+#include "astar.h"
 using namespace std;
 
 int main(int argc,char* argv[])
