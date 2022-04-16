@@ -9,17 +9,14 @@
 using namespace std;
 
 
-void print_array(int arr[])
+void print_array(int *arr,int size)
 {
-    int i = sizeof(arr);
-    cout << "\nARRAY SIZE : " << i;
-    
-    for (int x = 0; x < i; x++) {
-        cout << arr[x] << '\n';
-        cout << "\nFORLOOP SIZE : " << x;
+    //cout << '\n';
+    for (int x = 0; x < size - 1; x++) {
+        printf("%d,", arr[x]);
     }
-    
-    
+    printf("%d", arr[size - 1]);
+    cout << '\n';
 }
 
 
@@ -47,8 +44,9 @@ int main(int argc,char* argv[])
 
     //cout << fileName;
 
-    int leftShore [3] = {0,0,0};
-    int rightShore [3] = {0,0,0};
+    int leftShore [] = {0,0,0};
+    int rightShore [] = {0,0,0};
+
     
     if(fileName != "no"){
             //Open file
@@ -71,7 +69,7 @@ int main(int argc,char* argv[])
             bool leftRightShoreToggle = 0;
 
             while(getline(newfile, tp)){ //read data from file object and put it into string.
-                cout <<"\nOUTPUT FILE : " << tp << "\n"; //print the data of the string
+                //cout <<"\nOUTPUT FILE : " << tp << "\n"; //print the data of the string
 
                 size_t pos = 0;
                 int counter = 0;
@@ -80,7 +78,7 @@ int main(int argc,char* argv[])
                 while ((pos = tp.find(delimiter)) != std::string::npos) {
 
                     token = tp.substr(0, pos);
-                    cout << "\nTOKEN :"<<"\n" << token;
+                    //cout << "\nTOKEN :"<<"\n" << token;
 
                     if(leftRightShoreToggle == 0){
                         if(counter <= 1){
@@ -104,24 +102,22 @@ int main(int argc,char* argv[])
                     
                 }                
 
-                cout << "\nTOKEN :"<<"\n" << tp;
+                //cout << "\nTOKEN :"<<"\n" << tp;
 
             
             }
 
-        /*
-        std::string s = "scott>=tiger";
-        std::string delimiter = ">=";
-        std::string token = s.substr(0, s.find(delimiter)); // token is "scott"
-        */
+
             newfile.close(); //close the file object.
         }
 
 
-        cout<< "\nLEFTSHORE: "<<leftShore[0] << " " << leftShore[1] << " " << leftShore[2] << "\n";
-        cout<< "\nRIGHTSHORE: " <<rightShore[0] << " " <<rightShore[1] << " " << rightShore[2] << "\n";
-        //print_array(leftShore);
-       // print_array(rightShore);
+        //cout<< "\nLEFTSHORE: "<<leftShore[0] << " " << leftShore[1] << " " << leftShore[2] << "\n";
+        //cout<< "\nRIGHTSHORE: " <<rightShore[0] << " " <<rightShore[1] << " " << rightShore[2] << "\n";
+        int i = *(&leftShore + 1) - leftShore;
+        print_array( leftShore, i);
+        i = *(&rightShore + 1) - rightShore;
+        print_array( rightShore, i);
         
 
     }
