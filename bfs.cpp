@@ -56,3 +56,74 @@ bool BoatTree::isEqual(struct Node *other){
   }
   return result;
 }
+
+list<list<int>> BoatTree::bfsSolution() {
+    list<list<int>> solution; // use to keep track of solution
+    list<list<int>> explored // use to keep track of the possible next states
+    bool done = false;
+
+    explored.push_back(//initial state)
+
+    while (!explored.empty()) {
+      solution.push_back(explored.front());
+      explored.pop_front();
+
+      /*
+      if goal state reached:
+        return solution
+      
+      if Put one chicken in the boat doesn't create a state in solution:
+        explored.push_back(new state)
+
+      if Put two chickens in the boat doesn't create a state in solution:
+        explored.push_back(new state)
+
+      if Put one wolf in the boat doesn't create a state in solution:
+        explored.push_back(new state)
+
+      if Put one wolf and one chicken in the boat doesn't create a state in solution:
+        explored.push_back(new state)
+
+      if Put two wolves in the boat doesn't create a state in solution:
+        explored.push_back(new state)
+      */
+    }
+
+    // return fail
+}
+
+// solution for depth first search
+void BoatTree::dfsSolution(//current state) {
+    //before this function is called create a private variable that keeps track of the states/solution
+    //call the variable "solution"
+
+    list<list<int>> options;
+
+    //add current state to solution
+
+    /*
+    if goal state not reached:    
+      if Put one chicken in the boat doesn't create a state in solution:
+        options.push_back(new state)
+        dfsSolution(new state)
+
+      if Put two chickens in the boat doesn't create a state in solution:
+        options.push_back(new state)
+        dfsSolution(new state)
+
+      if Put one wolf in the boat doesn't create a state in solution:
+        options.push_back(new state)
+        dfsSolution(new state)
+
+      if Put one wolf and one chicken in the boat doesn't create a state in solution:
+        options.push_back(new state)
+        dfsSolution(new state)
+
+      if Put two wolves in the boat doesn't create a state in solution:
+        options.push_back(new state)
+        dfsSolution(new state)
+    */
+
+    //go to where this function was called.
+    //if solution doesn't contain the goal state then say it failed
+}
