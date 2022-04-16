@@ -3,7 +3,7 @@ exe_file = Senna_Titcomb_Austin_Friedrich_AIA1.exe
 $(exe_file): bfs.o dfs.o iddfs.o astar.o  Senna_Titcomb_Austin_Friedrich_AIA1.o
 	$(CC) bfs.o dfs.o iddfs.o astar.o Senna_Titcomb_Austin_Friedrich_AIA1.o -o $(exe_file)
 bfs.o: bfs.cpp bfs.h
-  $(CC) -c bfs.cpp
+	$(CC) -c bfs.cpp
 dfs.o: dfs.cpp dfs.h 
 	$(CC) -c dfs.cpp
 iddfs.o: iddfs.cpp iddfs.h 
