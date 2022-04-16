@@ -6,7 +6,12 @@
 #include "dfs.h"
 #include "iddfs.h"
 #include "astar.h"
+#include "graphmaker.cpp"
 using namespace std;
+
+#ifndef DEBUG
+#define DEBUG	true //false or true
+#endif
 
 
 void print_array(int *arr,int size)
@@ -111,13 +116,24 @@ int main(int argc,char* argv[])
             newfile.close(); //close the file object.
         }
 
-
+        if (DEBUG)  {
         //cout<< "\nLEFTSHORE: "<<leftShore[0] << " " << leftShore[1] << " " << leftShore[2] << "\n";
         //cout<< "\nRIGHTSHORE: " <<rightShore[0] << " " <<rightShore[1] << " " << rightShore[2] << "\n";
         int i = *(&leftShore + 1) - leftShore;
         print_array( leftShore, i);
         i = *(&rightShore + 1) - rightShore;
         print_array( rightShore, i);
+
+
+        item * history = graphmaker(rightShore,leftShore);
+
+
+        bool test = haveVisited(history,rightShore,leftShore);
+        
+        if (DEBUG)  printf(test ? "true" : "false");
+        }
+
+
         
 
     }

@@ -10,6 +10,8 @@ iddfs.o: iddfs.cpp iddfs.h
 	$(CC) -c iddfs.cpp
 astar.o: astar.cpp astar.h 
 	$(CC) -c astar.cpp
+graphmaker.o: graphmaker.cpp graphmaker.h 
+	$(CC) -c graphmaker.cpp
 Senna_Titcomb_Austin_Friedrich_AIA1.o: Senna_Titcomb_Austin_Friedrich_AIA1.cpp
 	$(CC) -c Senna_Titcomb_Austin_Friedrich_AIA1.cpp
 clean:
