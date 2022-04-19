@@ -1,129 +1,124 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <stdio.h>
+#include "graphmaker.h"
 #include "bfs.h"
+
 using namespace std;
 
-struct Node{
- int chicLeftBank,
-     chicRightBank,
-     wolfLeftBank,
-     wolfRightBank;
-  bool boatOnLeftBank;    //true boat is on left bank -- false boat on right bank;
-  struct Node *twoChic;
-  struct Node *oneChic;
-  struct Node *chicPlusWolf;
-  struct Node *oneWolf;
-  struct Node *twoWolf;
-  struct Node *prev;
-};
+#ifndef DEBUG
+#define DEBUG	false //false or true
+#endif
 
-//move is invalid if there are more wolves than chickens on one side.
-//BoatTree.h
-class BoatTree{
-  public:
-  BoatTree();
-  BoatTree(int lc, int rc, int lw, int rw, bool boatLeft);
-  
-  ~BoatTree();
-  
-  void buildGoal(int lc, int rc, int lw, int rw);
-  bool isEqual(struct Node *other);
-  bool buildTreeBreathFirst();
-  private:
-  struct Node *root;
-  struct Node *ActiveParent;
-  struct Node goal;
-  bool isMoveLegal(struct *Node test);
-  
-  
-}
+#ifndef TOPOFHEAP
+#define TOPOFHEAP	false //false or true
+#endif
+
+#ifndef PLEASEWAIT
+#define PLEASEWAIT	true //false or true
+#endif
 
 
-//BaotTree.cpp
-void  BoatTree::buildGoal(int lc, int rc, int lw, int rw){
- 
-  goal.chicLeftBank= lc;
-  goal.chicRightBank=rc;
-  goal.wolfLeftBank=lw;
-  goal.wolfRightBank=rw;
-  goal.twochic=nullptr;
-  goal.oneChic= nullptr;
-}
-
-
-bool BoatTree::isEqual(struct Node *other){
- bool result = false; 
-  if(goal.chicLeftBank == other->chicLeftBank && goal.chicRightBank == other->chicRightBank && goal.wolfLeftBank == other->wolfLeftBank && goal.wolfRightBank == other->wolfRightBank){
-    result = true;
-  }
-  return result;
-}
-
-list<list<int>> BoatTree::bfsSolution() {
-    list<list<int>> solution; // use to keep track of solution
-    list<list<int>> explored // use to keep track of the possible next states
-    bool done = false;
-
-    explored.push_back(//initial state)
-
-    while (!explored.empty()) {
-      solution.push_back(explored.front());
-      explored.pop_front();
-
-      /*
-      if goal state reached:
-        return solution
-      
-      if Put one chicken in the boat doesn't create a state in solution:
-        explored.push_back(new state)
-
-      if Put two chickens in the boat doesn't create a state in solution:
-        explored.push_back(new state)
-
-      if Put one wolf in the boat doesn't create a state in solution:
-        explored.push_back(new state)
-
-      if Put one wolf and one chicken in the boat doesn't create a state in solution:
-        explored.push_back(new state)
-
-      if Put two wolves in the boat doesn't create a state in solution:
-        explored.push_back(new state)
-      */
+void bfs(item* graph) {
+    if (DEBUG) {
+        printf("\nSTARTING BFS\n");
+        //print_array(currentQueue);
     }
+    item* pq = copyGraph(graph); // make disposable graph for deconstructions priority que
+    int pqSize = pq[0].arrSize; //the fist element in pq holds the size of the list since this is a pointer array.
+    //if (DEBUG) { printf("\ncopyGraph BFS\n"); }
+    //initilize array of values of visited and not visited. 
+    bool* visited = new bool[pqSize];
+    for (int i = 0; i < pqSize; i++) {
+        visited[i] = false;
+    }
+    visited[0] = true; // have visited root node
 
-    // return fail
+    //if (DEBUG) { printf("\visited BFS\n"); }
+    item* currentQueue = createQueue(pq, 0);//returns leaf nodes from a spcified parent
+
+    visited[0] = true;// fist node in list is explored
+    //queue.push_back(s);
+    bool winCon = false;
+    int x = 0; //check position zero for current iteam on que.
+    int counter = 0; //for please wait 
+    int increment = 0; //for please wait
+    while (winCon != true) { //for size of arr
+
+
+           // print_array(currentQueue);
+        
+
+        //make if visited
+        if (visited[currentQueue[x].priority] != true) {
+            visited[currentQueue[x].priority] = true;
+
+            if (winConLite(currentQueue[x])) {// check if winner
+                //solution found
+                //print solution and expanded nodes
+                printf("\n***SOLUTION FOUND BFS***\n" );
+                int nodesExpanded = nodesExp(visited, pqSize);
+                printf("Nodes Expanded in search %d\n", nodesExpanded);
+                printf(": BFS SOLUTION :\n");
+                winConPrint(pq, currentQueue[x]);
+                printf(": END BFS SOLUTION :\n");
+                winCon = true;//set wincon
+
+            }
+            else {
+                //if not winnder then add tree leaf nodes to que for checking
+                item* nextLeafNodes = createQueue(pq, currentQueue[x].priority); // get new leaf
+                currentQueue = combineItemArr(currentQueue, nextLeafNodes); //combine into queue
+                if (DEBUG) {
+                    //printf("\nCOMPLETED LIST MERGE\n");
+                   // print_array(currentQueue);
+                }
+                
+                //remove the first item from queue
+                currentQueue = removeFront(currentQueue); //pop top of que
+                if (TOPOFHEAP) {
+                    printf("\nCurrent Top of Heap\n");
+                    print_item(currentQueue[0]);
+                }
+
+
+                //debug counter and emergence exit
+                if (PLEASEWAIT) {//if i want to turn this off at some point
+                    if (counter == 0) {
+                        printf("\nPlease Wait for BFS\n");
+                    }
+                    counter++;
+                    int newInc = counter % 10; // every 10 loops print "."
+                    if (newInc > increment) {
+                        printf(".");
+                        increment = newInc;
+                    }
+                    if (winCon) {
+                        printf("\nGraph Complete!\n");
+                    }
+                    if (increment > 100000) {
+                        printf("\nEMERGENCY EXIT INC == 1000000\n");
+                        winCon = true;
+                        break;
+                    }
+                }
+
+            }
+
+
+
+
+            //add
+
+        } //mark visited
+
+    }
+    
+
+    //int counter
+        
+
+    //code here
 }
 
-// solution for depth first search
-void BoatTree::dfsSolution(//current state) {
-    //before this function is called create a private variable that keeps track of the states/solution
-    //call the variable "solution"
-
-    list<list<int>> options;
-
-    //add current state to solution
-
-    /*
-    if goal state not reached:    
-      if Put one chicken in the boat doesn't create a state in solution:
-        options.push_back(new state)
-        dfsSolution(new state)
-
-      if Put two chickens in the boat doesn't create a state in solution:
-        options.push_back(new state)
-        dfsSolution(new state)
-
-      if Put one wolf in the boat doesn't create a state in solution:
-        options.push_back(new state)
-        dfsSolution(new state)
-
-      if Put one wolf and one chicken in the boat doesn't create a state in solution:
-        options.push_back(new state)
-        dfsSolution(new state)
-
-      if Put two wolves in the boat doesn't create a state in solution:
-        options.push_back(new state)
-        dfsSolution(new state)
-    */
-
-    //go to where this function was called.
-    //if solution doesn't contain the goal state then say it failed
-}

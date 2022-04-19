@@ -2,31 +2,66 @@
 #include <fstream>
 #include <string>
 #include <stdio.h>
+#include "graphmaker.h"
 #include "bfs.h"
 #include "dfs.h"
 #include "iddfs.h"
 #include "astar.h"
-#include "graphmaker.cpp"
+
 using namespace std;
 
+#ifndef SKIPCHOICE
+#define SKIPCHOICE	true //false or true
+#endif
+
 #ifndef DEBUG
-#define DEBUG	true //false or true
+#define DEBUG	false //false or true
+#endif
+
+#ifndef PRINTEND
+#define PRINTEND	false //false or true
 #endif
 
 
-void print_array(int *arr,int size)
-{
-    //cout << '\n';
-    for (int x = 0; x < size - 1; x++) {
-        printf("%d,", arr[x]);
-    }
-    printf("%d", arr[size - 1]);
-    cout << '\n';
-}
+void playerChoice(item* arr) {
+    bool gameLoop = true;
+    if(SKIPCHOICE){
+        //bfs(arr);
+        dfs(arr);
+        //A*
+        //iddfs
+        exit(EXIT_SUCCESS);
 
+    }
+    //if not debug let user choose.
+    if (!(SKIPCHOICE)) {
+        while (gameLoop) {
+            int choice = 0;
+            printf(" ENTER 1 BFS\n ENTER 2 DFS\n ENTER 3 A*\n ENTER 4 IDDFS\n ENTER 5 QUIT\n ENTER INT :");
+            cin >> choice;
+            if (cin.fail()) {
+                choice = 0;
+                cin.clear();
+                cin.ignore();
+                printf("Incorrect entry. Try again: \n");
+            }
+            if (choice > 0 && choice < 6)
+            {
+                if (choice == 1) { bfs(arr); }
+                if (choice == 2) { bfs(arr); }
+                if (choice == 3) { bfs(arr); }
+                if (choice == 4) { bfs(arr); }
+                if (choice == 5) { gameLoop = false; }
+                //printf("Incorrect entry. Try again: ");
+            }
+
+        }
+    }
+}
 
 int main(int argc,char* argv[])
 {
+    
     string fileName = "no";
     printf("\nFile name: %s\n",argv[0]);
     printf("\nFile input: %s\n",argv[1]);
@@ -117,21 +152,13 @@ int main(int argc,char* argv[])
         }
 
         if (DEBUG)  {
-        //cout<< "\nLEFTSHORE: "<<leftShore[0] << " " << leftShore[1] << " " << leftShore[2] << "\n";
-        //cout<< "\nRIGHTSHORE: " <<rightShore[0] << " " <<rightShore[1] << " " << rightShore[2] << "\n";
-        int i = *(&leftShore + 1) - leftShore;
-        print_array( leftShore, i);
-        i = *(&rightShore + 1) - rightShore;
-        print_array( rightShore, i);
-
-
-        item * history = graphmaker(rightShore,leftShore);
-
-
-        bool test = haveVisited(history,rightShore,leftShore);
-        
-        if (DEBUG)  printf(test ? "true" : "false");
+            
         }
+        printf("Please wait, creating tree...\n");
+        item* priorityGraph = graphmaker(rightShore, leftShore);
+        if (PRINTEND)print_array(priorityGraph);
+        printf("Tree Complete, Choose Search Algorithm.\n");
+        playerChoice(priorityGraph);
 
 
         
@@ -139,6 +166,6 @@ int main(int argc,char* argv[])
     }
 
     
-    //return 0;
+    return 0;
 
 }

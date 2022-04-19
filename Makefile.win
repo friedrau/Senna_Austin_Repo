@@ -1,15 +1,13 @@
 CC = g++ -std=c++11
 exe_file = Senna_Titcomb_Austin_Friedrich_AIA1.exe
-$(exe_file): dfs.o iddfs.o astar.o graphmaker.o Senna_Titcomb_Austin_Friedrich_AIA1.o
-	$(CC) dfs.o iddfs.o astar.o Senna_Titcomb_Austin_Friedrich_AIA1.o -o $(exe_file)
-dfs.o: dfs.cpp dfs.h 
-	$(CC) -c dfs.cpp
-iddfs.o: iddfs.cpp iddfs.h 
-	$(CC) -c iddfs.cpp
-astar.o: astar.cpp astar.h 
-	$(CC) -c astar.cpp
+$(exe_file): graphmaker.o bfs.o dfs.o Senna_Titcomb_Austin_Friedrich_AIA1.o
+	$(CC) graphmaker.o bfs.o dfs.o Senna_Titcomb_Austin_Friedrich_AIA1.o -o $(exe_file)
 graphmaker.o: graphmaker.cpp graphmaker.h 
 	$(CC) -c graphmaker.cpp
+bfs.o: bfs.cpp bfs.h 
+	$(CC) -c bfs.cpp
+dfs.o: dfs.cpp dfs.h 
+	$(CC) -c dfs.cpp
 Senna_Titcomb_Austin_Friedrich_AIA1.o: Senna_Titcomb_Austin_Friedrich_AIA1.cpp
 	$(CC) -c Senna_Titcomb_Austin_Friedrich_AIA1.cpp
 clean:
