@@ -60,7 +60,7 @@ void iddfs(item* graph) {
            // print_array(currentQueue);
 
         if (currentQueue[0].arrSize == 0) {
-            printf("made it");
+            //printf("made it");
             bool noSolution = true;
 
             for (int c = 0; c < pqSize; c++) {
@@ -117,8 +117,6 @@ void iddfs(item* graph) {
                     //if not winnder then add tree leaf nodes to que for checking
                     item* nextLeafNodes = createQueue(pq, currentQueue[x].priority); // get new leaf
                     currentQueue = combineItemArr(nextLeafNodes, currentQueue); //Only change for DFS is to search Left hand side of graph first.
-                //iddfs Stopes here
-                //currentQueue = combineItemArr(currentQueue, nextLeafNodes); //combine into queue
 
                     if (DEBUG) {
                         //printf("\nCOMPLETED LIST MERGE\n");

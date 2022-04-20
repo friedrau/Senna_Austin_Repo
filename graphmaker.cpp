@@ -20,6 +20,14 @@ using namespace std;
 #define DEBUGCOMBINE	false //false or true
 #endif
 
+#ifndef LITE //a lighter version of checking if the last node is correct.
+#define LITE	false //false or true
+#endif
+
+#ifndef HEAVY //to make sure that the ending node is the correct node.
+#define HEAVY	true //false or true
+#endif
+
 int nodesExp(bool* visited, int size) {
     int counter = 0;
     for (int x = 0; x < size; x++) {
@@ -440,6 +448,8 @@ bool winCon(item* history, item newMove) {
                         print_item(newMove);
                         printf("\n***Returning True***\n");
                     }
+                    //printf("WINCON\n");
+                    //print_item(newMove);
                     winCondition = true;
                     return true;
                 }
@@ -559,11 +569,11 @@ item graphCombo(item* history, item newMove) { //modifies item if items value is
 // 1.)check to see if move allready existed in list if so then change priority number to match old listing.
 item* addNewItem(item* returnArray, item newMove, item currentMove, int counter) { //modifies item if items value is == to a previous value, 
     newMove.parent = currentMove.priority;
+    //if (compaireItem(newMove, returnArray[0])) return returnArray; //if move is base node.
+    if (compaireItem(newMove, returnArray[returnArray[newMove.parent].parent])) return returnArray; //if move is repeat
     newMove.priority = counter;//increment counter to keep track of prority
     newMove = graphCombo(returnArray,newMove); //check to see if move allready existed in list if so then change priority number to match old listing.
-    if (DEBUG) printf("ADDING TWO CHICKS TO ARR\n");
     returnArray = incReturnArr(returnArray, newMove);//add new item to return array
-    if (DEBUG) printf("ENDED ADDING\n");
     return returnArray;
 
 }
@@ -629,14 +639,20 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
+              int size = returnArray[0].arrSize;
               returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              counter++;
-              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              int size2 = returnArray[0].arrSize;
+                  if (size < size2) {
+                      counter++;
+                  }
+                  if (LITE) winCondition = winConLite(newMove);
+                  if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              if (winCondition == true) {
+                  break;
+              }
           }
       }
-      if (winCondition == true) {
-          break;
-      }
+
 
       //*********************onechick 
       if (onechick(currentMove)) {
@@ -661,14 +677,20 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
+              int size = returnArray[0].arrSize;
               returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              counter++;
-              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              int size2 = returnArray[0].arrSize;
+              if (size < size2) {
+                  counter++;
+              }
+              if (LITE) winCondition = winConLite(newMove);
+              if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              if (winCondition == true) {
+                  break;
+              }
           }
       }
-      if (winCondition == true) {
-          break;
-      }
+
       //*********************twowolf 
       if (twowolf(currentMove)) {
           if (DEBUG) printf("SELECTING TWO WOLFS\n");
@@ -692,14 +714,20 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
+              int size = returnArray[0].arrSize;
               returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              counter++;
-              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              int size2 = returnArray[0].arrSize;
+              if (size < size2) {
+                  counter++;
+              }
+              if (LITE) winCondition = winConLite(newMove);
+              if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              if (winCondition == true) {
+                  break;
+              }
           }
       }
-      if (winCondition == true) {
-          break;
-      }
+
       //*********************onewolf 
       if (onewolf(currentMove)) {
           if (DEBUG) printf("SELECTING ONE WOLFS\n");
@@ -723,16 +751,22 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
+              int size = returnArray[0].arrSize;
               returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              counter++;
-              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              int size2 = returnArray[0].arrSize;
+              if (size < size2) {
+                  counter++;
+              }
+              if (LITE) winCondition = winConLite(newMove);
+              if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              if (winCondition == true) {
+                  break;
+              }
           }
 
           //}
       }
-      if (winCondition == true) {
-          break;
-      }
+
 
 
       //*********************chickandwolf 
@@ -762,16 +796,22 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
+              int size = returnArray[0].arrSize;
               returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              counter++;
-              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              int size2 = returnArray[0].arrSize;
+              if (size < size2) {
+                  counter++;
+              }
+              if(LITE) winCondition = winConLite(newMove);
+              if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+              if (winCondition == true) {
+                  break;
+              }
           }
       }
 
 
-      if (winCondition == true) {
-          break;
-      }
+
 
       //loop breaker
       if (winCondition != true) { // if the arrsize and loop size dont equal keep looping.
