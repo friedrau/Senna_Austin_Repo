@@ -16,7 +16,11 @@ using namespace std;
 #endif
 
 #ifndef PLEASEWAIT
-#define PLEASEWAIT	true //false or true
+#define PLEASEWAIT	false //false or true
+#endif
+
+#ifndef CHECKLAST
+#define CHECKLAST	false //false or true
 #endif
 
 
@@ -38,7 +42,6 @@ void bfs(item* graph) {
     //if (DEBUG) { printf("\visited BFS\n"); }
     item* currentQueue = createQueue(pq, 0);//returns leaf nodes from a spcified parent
 
-    visited[0] = true;// fist node in list is explored
     //queue.push_back(s);
     bool winCon = false;
     int x = 0; //check position zero for current iteam on que.
@@ -48,6 +51,11 @@ void bfs(item* graph) {
 
 
            // print_array(currentQueue);
+
+        if (currentQueue[x].arrSize == 0) {
+            printf("ARRAY EMPTY NO SOLUTION\n");
+            break;
+        }
         
 
         //make if visited
@@ -76,7 +84,7 @@ void bfs(item* graph) {
                 }
                 
                 //remove the first item from queue
-                currentQueue = removeFront(currentQueue); //pop top of que
+                //currentQueue = removeFront(currentQueue); //pop top of que
                 if (TOPOFHEAP) {
                     printf("\nCurrent Top of Heap\n");
                     print_item(currentQueue[0]);
@@ -111,6 +119,12 @@ void bfs(item* graph) {
 
             //add
 
+        }
+        else { // if visited remove item.
+            if (CHECKLAST) {
+                printf("Check Last removing item");
+            }
+            currentQueue = removeFront(currentQueue); //remove from stack pop top of stack
         } //mark visited
 
     }

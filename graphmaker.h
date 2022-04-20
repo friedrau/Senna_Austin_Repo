@@ -27,7 +27,10 @@ item* combineItemArr(item* returnArr, item* newItem);//combines two list arrays
 item* removeBack(item* returnArr);//removes item from back of array
 item* removeFront(item* returnArr); //removes item from front of array
 void winConPrint(item* history, item newMove);//prints winncon array solution
-int nodesExp(bool* visited, int size);
+int nodesExp(bool* visited, int size);//gets every node explored #
+int distanceFromRoot(item* history, item newMove);//gets distance from current node to root
+item* incReturnArr(item* returnArr, item newItem);//increments array by one
+bool compaireItem(item history, item newMove);//compaires two items
 
 
 

@@ -1,0 +1,99 @@
+Tree Complete, Choose Search Algorithm.
+made it
+***SOLUTION FOUND IDDFS***
+Nodes Expanded in search 14
+: IDDFS SOLUTION :
+**************************
+Leftshore      : 3,3,1
+Rightshore     : 0,0,0
+Prority number : 11331
+Parent number  : 4932
+Array Size     : 4657
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,1,0
+Rightshore     : 0,2,1
+Prority number : 4932
+Parent number  : 2150
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,2,1
+Rightshore     : 0,1,0
+Prority number : 2150
+Parent number  : 933
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,0,0
+Rightshore     : 0,3,1
+Prority number : 933
+Parent number  : 405
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,1,1
+Rightshore     : 0,2,0
+Prority number : 405
+Parent number  : 175
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 1,1,0
+Rightshore     : 2,2,1
+Prority number : 175
+Parent number  : 75
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 2,2,1
+Rightshore     : 1,1,0
+Prority number : 75
+Parent number  : 32
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 0,2,0
+Rightshore     : 3,1,1
+Prority number : 32
+Parent number  : 13
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 0,3,1
+Rightshore     : 3,0,0
+Prority number : 13
+Parent number  : 5
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 0,1,0
+Rightshore     : 3,2,1
+Prority number : 5
+Parent number  : 1
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+
+***ROOT NODE***
+**************************
+Leftshore      : 0,0,0
+Rightshore     : 3,3,1
+Prority number : 0
+Parent number  : 0
+Array Size     : 29014
+**************************
+
+***ROOT NODE***
+STEPS FROM ROOT TO SOLUTION : 11
+: END IDDFS SOLUTION :

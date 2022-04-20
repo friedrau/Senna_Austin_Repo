@@ -3,7 +3,6 @@
 #include <string>
 #include <stdio.h>
 #include "graphmaker.h"
-
 using namespace std;
 
 //This files is for graph making and utility functions
@@ -36,7 +35,7 @@ void print_array(int* arr, int size)
         printf("%d,", arr[x]);
     }
     printf("%d", arr[size - 1]);
-    cout << '\n';
+    printf("\n");
 }
 
 void print_array(item* arr)
@@ -82,7 +81,20 @@ void print_item(item arr)
     
 }
 
+bool compaireItem(item history, item newMove) {
+    if (history.leftShore[0] == newMove.leftShore[0] &&
+        history.leftShore[1] == newMove.leftShore[1] &&
+        history.leftShore[2] == newMove.leftShore[2])
+    {
+       // printf("true");
+        return true;
 
+    }
+    else
+    {
+        return false;
+    }
+}
 
 //Rules**
 
@@ -333,10 +345,13 @@ item* createQueue(item* returnArr,int parent) {
 //0 == chick
 //1 == wolf
 //2 == boat
+
 bool isValid(item newMove) {
     //IF leftshore != 0 then check if leftshore Greater then right shore
     bool leftside = false;
     bool rightside = false;
+
+
     //if shore is not == 0 then check if valid
     if (newMove.leftShore[0] != 0) {
         if (newMove.leftShore[0] >= newMove.leftShore[1]) {
@@ -377,8 +392,10 @@ bool isValid(item newMove) {
         }
     }
 
-
     bool finaly = false;
+
+    //if left shore all == 0  then if you have parent 0 then but not priority 0 then you must be false.
+
     if (leftside && rightside) { //if left and right are true return true
         finaly = true;
     }
@@ -500,12 +517,63 @@ void winConPrint(item* history, item newMove) {
     }
 }
 
+int distanceFromRoot(item* history, item newMove) {
+    //bool winCondition = false;
+    int counter = 0;
+    
+    int rows = history[0].arrSize;
+
+    for (int i = 0; i < rows; i++) {
+
+        if (newMove.parent == 0) { //if parent is root node then we have our solution
+            counter++;
+            newMove = history[0];
+            //ROOT NODE
+            break;
+        }
+        //if found previous parent.
+        if (newMove.parent == history[i].priority) {
+            counter++;
+            newMove = history[i];
+        }
+    }
+    return counter;
+}
+
+//If an element has the same value as a pervious element then that is the same element. So priority is == to the previous priority.
+item graphCombo(item* history, item newMove) { //modifies item if items value is == to a previous value, 
+    //if old ls == new ls 
+    //if old rs == new rs
+    //newitem.priority == old priority.
+    int size = history[0].arrSize;
+    for (int i = 0; i < size; i++) {
+        if (compaireItem(history[i], newMove)) {
+            newMove.priority = history[i].priority;
+        }
+    }
+    return newMove;
+
+}
+
+//adds item to graph, and preforms check
+// 1.)check to see if move allready existed in list if so then change priority number to match old listing.
+item* addNewItem(item* returnArray, item newMove, item currentMove, int counter) { //modifies item if items value is == to a previous value, 
+    newMove.parent = currentMove.priority;
+    newMove.priority = counter;//increment counter to keep track of prority
+    newMove = graphCombo(returnArray,newMove); //check to see if move allready existed in list if so then change priority number to match old listing.
+    if (DEBUG) printf("ADDING TWO CHICKS TO ARR\n");
+    returnArray = incReturnArr(returnArray, newMove);//add new item to return array
+    if (DEBUG) printf("ENDED ADDING\n");
+    return returnArray;
+
+}
+
+//item* iddfs
 
 
 //Graphmaker makes a graph with this the conditions set by the input file
 //Makes graph and tree branches defined by rules set by chick wolf boat
-//returns a prority que. the priority assigns the parent the value of the position in that que, the child hold a int that connects it to that Prority position
-//e.g (Priority = 2 parent = 0) -> child -> (priority = 14 parent = 2) -> child -> (priority = 46 parent = 14) 
+
 
 item* graphmaker(int * arrStart,int * arrEnd) {
 
@@ -561,13 +629,9 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
-              newMove.parent = currentMove.priority;
-              newMove.priority = counter;//increment counter to keep track of prority
+              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
               counter++;
-              if (DEBUG) printf("ADDING TWO CHICKS TO ARR\n");
-              returnArray = incReturnArr(returnArray, newMove);//add new item to return array
-              if (DEBUG) printf("ENDED ADDING\n");
-              winCondition = winCon(returnArray, newMove);//Checks win con
+              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
           }
       }
       if (winCondition == true) {
@@ -597,11 +661,9 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
-              newMove.parent = currentMove.priority;
-              newMove.priority = counter;//increment counter to keep track of prority
+              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
               counter++;
-              returnArray = incReturnArr(returnArray, newMove);//add new item to return array
-              winCondition = winCon(returnArray, newMove);
+              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
           }
       }
       if (winCondition == true) {
@@ -630,11 +692,9 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
-              newMove.parent = currentMove.priority;
-              newMove.priority = counter;//increment counter to keep track of prority
+              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
               counter++;
-              returnArray = incReturnArr(returnArray, newMove);//add new item to return array
-              winCondition = winCon(returnArray, newMove);
+              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
           }
       }
       if (winCondition == true) {
@@ -663,11 +723,9 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
-              newMove.parent = currentMove.priority;
-              newMove.priority = counter;//increment counter to keep track of prority
+              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
               counter++;
-              returnArray = incReturnArr(returnArray, newMove);//add new item to return array
-              winCondition = winCon(returnArray, newMove);
+              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
           }
 
           //}
@@ -704,11 +762,9 @@ item* graphmaker(int * arrStart,int * arrEnd) {
               newMove.leftShore[2] = 1;
           }
           if (isValid(newMove)) {
-              newMove.parent = currentMove.priority;
-              newMove.priority = counter;//increment counter to keep track of prority
+              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
               counter++;
-              returnArray = incReturnArr(returnArray, newMove);//add new item to return array
-              winCondition = winCon(returnArray, newMove);
+              winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
           }
       }
 

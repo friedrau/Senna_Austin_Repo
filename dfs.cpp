@@ -12,15 +12,15 @@ using namespace std;
 #endif
 
 #ifndef TOPOFHEAP
-#define TOPOFHEAP	true //false or true
+#define TOPOFHEAP	false //false or true
 #endif
 
 #ifndef PLEASEWAIT
-#define PLEASEWAIT	true //false or true
+#define PLEASEWAIT	false //false or true
 #endif
 
 #ifndef CHECKLAST
-#define CHECKLAST	true //false or true
+#define CHECKLAST	false //false or true
 #endif
 
 
@@ -42,7 +42,6 @@ void dfs(item* graph) {
     //if (DEBUG) { printf("\visited BFS\n"); }
     item* currentQueue = createQueue(pq, 0);//returns leaf nodes from a spcified parent
 
-    visited[0] = true;// fist node in list is explored
     //queue.push_back(s);
     bool winCon = false;
     int x = 0; //check position zero for current iteam on que.
@@ -53,7 +52,10 @@ void dfs(item* graph) {
 
            // print_array(currentQueue);
 
-        if (currentQueue[x].arrSize == 0) printf("ARRAY EMPTY");
+        if (currentQueue[x].arrSize == 0) {
+            printf("ARRAY EMPTY NO SOLUTION\n");
+            break;
+        }
 
             
         //make if visited
@@ -63,7 +65,7 @@ void dfs(item* graph) {
             if (winConLite(currentQueue[x])) {// check if winner
                 //solution found
                 //print solution and expanded nodes
-                printf("\n***SOLUTION FOUND BFS***\n");
+                printf("\n***SOLUTION FOUND DFS***\n");
                 int nodesExpanded = nodesExp(visited, pqSize);
                 printf("Nodes Expanded in search %d\n", nodesExpanded);
                 printf(": DFS SOLUTION :\n");
@@ -82,7 +84,7 @@ void dfs(item* graph) {
                 }
 
                 //remove the first item from queue
-                currentQueue = removeFront(currentQueue); //pop top of que
+                //currentQueue = removeFront(currentQueue); //pop top of que
                 if (TOPOFHEAP) {
                     printf("\nCurrent Top of Heap\n");
                     print_item(currentQueue[0]);
