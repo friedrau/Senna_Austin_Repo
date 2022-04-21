@@ -1,0 +1,3147 @@
+Tree Complete, Choose Search Algorithm.
+
+***SOLUTION FOUND DFS***
+Nodes Expanded in search 529
+: DFS SOLUTION :
+**************************
+Leftshore      : 100,97,1
+Rightshore     : 0,0,0
+Prority number : 66762
+Parent number  : 66653
+Array Size     : 31022
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 99,96,0
+Rightshore     : 1,1,1
+Prority number : 66653
+Parent number  : 66563
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 100,96,1
+Rightshore     : 0,1,0
+Prority number : 66563
+Parent number  : 66036
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 98,96,0
+Rightshore     : 2,1,1
+Prority number : 66036
+Parent number  : 65381
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 99,96,1
+Rightshore     : 1,1,0
+Prority number : 65381
+Parent number  : 65063
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 97,96,0
+Rightshore     : 3,1,1
+Prority number : 65063
+Parent number  : 64904
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 97,97,1
+Rightshore     : 3,0,0
+Prority number : 64904
+Parent number  : 64838
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 97,95,0
+Rightshore     : 3,2,1
+Prority number : 64838
+Parent number  : 64812
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 98,95,1
+Rightshore     : 2,2,0
+Prority number : 64812
+Parent number  : 64801
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 96,95,0
+Rightshore     : 4,2,1
+Prority number : 64801
+Parent number  : 64797
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 96,96,1
+Rightshore     : 4,1,0
+Prority number : 64797
+Parent number  : 64667
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 96,94,0
+Rightshore     : 4,3,1
+Prority number : 64667
+Parent number  : 64558
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 96,95,1
+Rightshore     : 4,2,0
+Prority number : 64558
+Parent number  : 64240
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 96,93,0
+Rightshore     : 4,4,1
+Prority number : 64240
+Parent number  : 63918
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 96,94,1
+Rightshore     : 4,3,0
+Prority number : 63918
+Parent number  : 63597
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 95,93,0
+Rightshore     : 5,4,1
+Prority number : 63597
+Parent number  : 63461
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 96,93,1
+Rightshore     : 4,4,0
+Prority number : 63461
+Parent number  : 63376
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 94,93,0
+Rightshore     : 6,4,1
+Prority number : 63376
+Parent number  : 63339
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 94,94,1
+Rightshore     : 6,3,0
+Prority number : 63339
+Parent number  : 63309
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 94,92,0
+Rightshore     : 6,5,1
+Prority number : 63309
+Parent number  : 63296
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 94,93,1
+Rightshore     : 6,4,0
+Prority number : 63296
+Parent number  : 63250
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 94,91,0
+Rightshore     : 6,6,1
+Prority number : 63250
+Parent number  : 63184
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 94,92,1
+Rightshore     : 6,5,0
+Prority number : 63184
+Parent number  : 62682
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 93,91,0
+Rightshore     : 7,6,1
+Prority number : 62682
+Parent number  : 62036
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 94,91,1
+Rightshore     : 6,6,0
+Prority number : 62036
+Parent number  : 61718
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 92,91,0
+Rightshore     : 8,6,1
+Prority number : 61718
+Parent number  : 61559
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 92,92,1
+Rightshore     : 8,5,0
+Prority number : 61559
+Parent number  : 61493
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 92,90,0
+Rightshore     : 8,7,1
+Prority number : 61493
+Parent number  : 61467
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 93,90,1
+Rightshore     : 7,7,0
+Prority number : 61467
+Parent number  : 61456
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 91,90,0
+Rightshore     : 9,7,1
+Prority number : 61456
+Parent number  : 61452
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 91,91,1
+Rightshore     : 9,6,0
+Prority number : 61452
+Parent number  : 61322
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 91,89,0
+Rightshore     : 9,8,1
+Prority number : 61322
+Parent number  : 61213
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 91,90,1
+Rightshore     : 9,7,0
+Prority number : 61213
+Parent number  : 60895
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 91,88,0
+Rightshore     : 9,9,1
+Prority number : 60895
+Parent number  : 60573
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 91,89,1
+Rightshore     : 9,8,0
+Prority number : 60573
+Parent number  : 60252
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 90,88,0
+Rightshore     : 10,9,1
+Prority number : 60252
+Parent number  : 60116
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 91,88,1
+Rightshore     : 9,9,0
+Prority number : 60116
+Parent number  : 60031
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 89,88,0
+Rightshore     : 11,9,1
+Prority number : 60031
+Parent number  : 59994
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 89,89,1
+Rightshore     : 11,8,0
+Prority number : 59994
+Parent number  : 59964
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 89,87,0
+Rightshore     : 11,10,1
+Prority number : 59964
+Parent number  : 59951
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 89,88,1
+Rightshore     : 11,9,0
+Prority number : 59951
+Parent number  : 59905
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 89,86,0
+Rightshore     : 11,11,1
+Prority number : 59905
+Parent number  : 59839
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 89,87,1
+Rightshore     : 11,10,0
+Prority number : 59839
+Parent number  : 59337
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 88,86,0
+Rightshore     : 12,11,1
+Prority number : 59337
+Parent number  : 58691
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 89,86,1
+Rightshore     : 11,11,0
+Prority number : 58691
+Parent number  : 58373
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 87,86,0
+Rightshore     : 13,11,1
+Prority number : 58373
+Parent number  : 58214
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 87,87,1
+Rightshore     : 13,10,0
+Prority number : 58214
+Parent number  : 58148
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 87,85,0
+Rightshore     : 13,12,1
+Prority number : 58148
+Parent number  : 58122
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 88,85,1
+Rightshore     : 12,12,0
+Prority number : 58122
+Parent number  : 58111
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 86,85,0
+Rightshore     : 14,12,1
+Prority number : 58111
+Parent number  : 58107
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 86,86,1
+Rightshore     : 14,11,0
+Prority number : 58107
+Parent number  : 57977
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 86,84,0
+Rightshore     : 14,13,1
+Prority number : 57977
+Parent number  : 57868
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 86,85,1
+Rightshore     : 14,12,0
+Prority number : 57868
+Parent number  : 57550
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 86,83,0
+Rightshore     : 14,14,1
+Prority number : 57550
+Parent number  : 57228
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 86,84,1
+Rightshore     : 14,13,0
+Prority number : 57228
+Parent number  : 56907
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 85,83,0
+Rightshore     : 15,14,1
+Prority number : 56907
+Parent number  : 56771
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 86,83,1
+Rightshore     : 14,14,0
+Prority number : 56771
+Parent number  : 56686
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 84,83,0
+Rightshore     : 16,14,1
+Prority number : 56686
+Parent number  : 56649
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 84,84,1
+Rightshore     : 16,13,0
+Prority number : 56649
+Parent number  : 56619
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 84,82,0
+Rightshore     : 16,15,1
+Prority number : 56619
+Parent number  : 56606
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 84,83,1
+Rightshore     : 16,14,0
+Prority number : 56606
+Parent number  : 56560
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 84,81,0
+Rightshore     : 16,16,1
+Prority number : 56560
+Parent number  : 56494
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 84,82,1
+Rightshore     : 16,15,0
+Prority number : 56494
+Parent number  : 55992
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 83,81,0
+Rightshore     : 17,16,1
+Prority number : 55992
+Parent number  : 55346
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 84,81,1
+Rightshore     : 16,16,0
+Prority number : 55346
+Parent number  : 55028
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 82,81,0
+Rightshore     : 18,16,1
+Prority number : 55028
+Parent number  : 54869
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 82,82,1
+Rightshore     : 18,15,0
+Prority number : 54869
+Parent number  : 54803
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 82,80,0
+Rightshore     : 18,17,1
+Prority number : 54803
+Parent number  : 54777
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 83,80,1
+Rightshore     : 17,17,0
+Prority number : 54777
+Parent number  : 54766
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 81,80,0
+Rightshore     : 19,17,1
+Prority number : 54766
+Parent number  : 54762
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 81,81,1
+Rightshore     : 19,16,0
+Prority number : 54762
+Parent number  : 54632
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 81,79,0
+Rightshore     : 19,18,1
+Prority number : 54632
+Parent number  : 54523
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 81,80,1
+Rightshore     : 19,17,0
+Prority number : 54523
+Parent number  : 54205
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 81,78,0
+Rightshore     : 19,19,1
+Prority number : 54205
+Parent number  : 53883
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 81,79,1
+Rightshore     : 19,18,0
+Prority number : 53883
+Parent number  : 53562
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 80,78,0
+Rightshore     : 20,19,1
+Prority number : 53562
+Parent number  : 53426
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 81,78,1
+Rightshore     : 19,19,0
+Prority number : 53426
+Parent number  : 53341
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 79,78,0
+Rightshore     : 21,19,1
+Prority number : 53341
+Parent number  : 53304
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 79,79,1
+Rightshore     : 21,18,0
+Prority number : 53304
+Parent number  : 53274
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 79,77,0
+Rightshore     : 21,20,1
+Prority number : 53274
+Parent number  : 53261
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 79,78,1
+Rightshore     : 21,19,0
+Prority number : 53261
+Parent number  : 53215
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 79,76,0
+Rightshore     : 21,21,1
+Prority number : 53215
+Parent number  : 53149
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 79,77,1
+Rightshore     : 21,20,0
+Prority number : 53149
+Parent number  : 52647
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 78,76,0
+Rightshore     : 22,21,1
+Prority number : 52647
+Parent number  : 52001
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 79,76,1
+Rightshore     : 21,21,0
+Prority number : 52001
+Parent number  : 51683
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 77,76,0
+Rightshore     : 23,21,1
+Prority number : 51683
+Parent number  : 51524
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 77,77,1
+Rightshore     : 23,20,0
+Prority number : 51524
+Parent number  : 51458
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 77,75,0
+Rightshore     : 23,22,1
+Prority number : 51458
+Parent number  : 51432
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 78,75,1
+Rightshore     : 22,22,0
+Prority number : 51432
+Parent number  : 51421
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 76,75,0
+Rightshore     : 24,22,1
+Prority number : 51421
+Parent number  : 51417
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 76,76,1
+Rightshore     : 24,21,0
+Prority number : 51417
+Parent number  : 51287
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 76,74,0
+Rightshore     : 24,23,1
+Prority number : 51287
+Parent number  : 51178
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 76,75,1
+Rightshore     : 24,22,0
+Prority number : 51178
+Parent number  : 50860
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 76,73,0
+Rightshore     : 24,24,1
+Prority number : 50860
+Parent number  : 50538
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 76,74,1
+Rightshore     : 24,23,0
+Prority number : 50538
+Parent number  : 50217
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 75,73,0
+Rightshore     : 25,24,1
+Prority number : 50217
+Parent number  : 50081
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 76,73,1
+Rightshore     : 24,24,0
+Prority number : 50081
+Parent number  : 49996
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 74,73,0
+Rightshore     : 26,24,1
+Prority number : 49996
+Parent number  : 49959
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 74,74,1
+Rightshore     : 26,23,0
+Prority number : 49959
+Parent number  : 49929
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 74,72,0
+Rightshore     : 26,25,1
+Prority number : 49929
+Parent number  : 49916
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 74,73,1
+Rightshore     : 26,24,0
+Prority number : 49916
+Parent number  : 49870
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 74,71,0
+Rightshore     : 26,26,1
+Prority number : 49870
+Parent number  : 49804
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 74,72,1
+Rightshore     : 26,25,0
+Prority number : 49804
+Parent number  : 49302
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 73,71,0
+Rightshore     : 27,26,1
+Prority number : 49302
+Parent number  : 48656
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 74,71,1
+Rightshore     : 26,26,0
+Prority number : 48656
+Parent number  : 48338
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 72,71,0
+Rightshore     : 28,26,1
+Prority number : 48338
+Parent number  : 48179
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 72,72,1
+Rightshore     : 28,25,0
+Prority number : 48179
+Parent number  : 48113
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 72,70,0
+Rightshore     : 28,27,1
+Prority number : 48113
+Parent number  : 48087
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 73,70,1
+Rightshore     : 27,27,0
+Prority number : 48087
+Parent number  : 48076
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 71,70,0
+Rightshore     : 29,27,1
+Prority number : 48076
+Parent number  : 48072
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 71,71,1
+Rightshore     : 29,26,0
+Prority number : 48072
+Parent number  : 47942
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 71,69,0
+Rightshore     : 29,28,1
+Prority number : 47942
+Parent number  : 47833
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 71,70,1
+Rightshore     : 29,27,0
+Prority number : 47833
+Parent number  : 47515
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 71,68,0
+Rightshore     : 29,29,1
+Prority number : 47515
+Parent number  : 47193
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 71,69,1
+Rightshore     : 29,28,0
+Prority number : 47193
+Parent number  : 46872
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 70,68,0
+Rightshore     : 30,29,1
+Prority number : 46872
+Parent number  : 46736
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 71,68,1
+Rightshore     : 29,29,0
+Prority number : 46736
+Parent number  : 46651
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 69,68,0
+Rightshore     : 31,29,1
+Prority number : 46651
+Parent number  : 46614
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 69,69,1
+Rightshore     : 31,28,0
+Prority number : 46614
+Parent number  : 46584
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 69,67,0
+Rightshore     : 31,30,1
+Prority number : 46584
+Parent number  : 46571
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 69,68,1
+Rightshore     : 31,29,0
+Prority number : 46571
+Parent number  : 46525
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 69,66,0
+Rightshore     : 31,31,1
+Prority number : 46525
+Parent number  : 46459
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 69,67,1
+Rightshore     : 31,30,0
+Prority number : 46459
+Parent number  : 45957
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 68,66,0
+Rightshore     : 32,31,1
+Prority number : 45957
+Parent number  : 45311
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 69,66,1
+Rightshore     : 31,31,0
+Prority number : 45311
+Parent number  : 44993
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 67,66,0
+Rightshore     : 33,31,1
+Prority number : 44993
+Parent number  : 44834
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 67,67,1
+Rightshore     : 33,30,0
+Prority number : 44834
+Parent number  : 44768
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 67,65,0
+Rightshore     : 33,32,1
+Prority number : 44768
+Parent number  : 44742
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 68,65,1
+Rightshore     : 32,32,0
+Prority number : 44742
+Parent number  : 44731
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 66,65,0
+Rightshore     : 34,32,1
+Prority number : 44731
+Parent number  : 44727
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 66,66,1
+Rightshore     : 34,31,0
+Prority number : 44727
+Parent number  : 44597
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 66,64,0
+Rightshore     : 34,33,1
+Prority number : 44597
+Parent number  : 44488
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 66,65,1
+Rightshore     : 34,32,0
+Prority number : 44488
+Parent number  : 44170
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 66,63,0
+Rightshore     : 34,34,1
+Prority number : 44170
+Parent number  : 43848
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 66,64,1
+Rightshore     : 34,33,0
+Prority number : 43848
+Parent number  : 43527
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 65,63,0
+Rightshore     : 35,34,1
+Prority number : 43527
+Parent number  : 43391
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 66,63,1
+Rightshore     : 34,34,0
+Prority number : 43391
+Parent number  : 43306
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 64,63,0
+Rightshore     : 36,34,1
+Prority number : 43306
+Parent number  : 43269
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 64,64,1
+Rightshore     : 36,33,0
+Prority number : 43269
+Parent number  : 43239
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 64,62,0
+Rightshore     : 36,35,1
+Prority number : 43239
+Parent number  : 43226
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 64,63,1
+Rightshore     : 36,34,0
+Prority number : 43226
+Parent number  : 43180
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 64,61,0
+Rightshore     : 36,36,1
+Prority number : 43180
+Parent number  : 43114
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 64,62,1
+Rightshore     : 36,35,0
+Prority number : 43114
+Parent number  : 42612
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 63,61,0
+Rightshore     : 37,36,1
+Prority number : 42612
+Parent number  : 41966
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 64,61,1
+Rightshore     : 36,36,0
+Prority number : 41966
+Parent number  : 41648
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 62,61,0
+Rightshore     : 38,36,1
+Prority number : 41648
+Parent number  : 41489
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 62,62,1
+Rightshore     : 38,35,0
+Prority number : 41489
+Parent number  : 41423
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 62,60,0
+Rightshore     : 38,37,1
+Prority number : 41423
+Parent number  : 41397
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 63,60,1
+Rightshore     : 37,37,0
+Prority number : 41397
+Parent number  : 41386
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 61,60,0
+Rightshore     : 39,37,1
+Prority number : 41386
+Parent number  : 41382
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 61,61,1
+Rightshore     : 39,36,0
+Prority number : 41382
+Parent number  : 41252
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 61,59,0
+Rightshore     : 39,38,1
+Prority number : 41252
+Parent number  : 41143
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 61,60,1
+Rightshore     : 39,37,0
+Prority number : 41143
+Parent number  : 40825
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 61,58,0
+Rightshore     : 39,39,1
+Prority number : 40825
+Parent number  : 40503
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 61,59,1
+Rightshore     : 39,38,0
+Prority number : 40503
+Parent number  : 40182
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 60,58,0
+Rightshore     : 40,39,1
+Prority number : 40182
+Parent number  : 40046
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 61,58,1
+Rightshore     : 39,39,0
+Prority number : 40046
+Parent number  : 39961
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 59,58,0
+Rightshore     : 41,39,1
+Prority number : 39961
+Parent number  : 39924
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 59,59,1
+Rightshore     : 41,38,0
+Prority number : 39924
+Parent number  : 39894
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 59,57,0
+Rightshore     : 41,40,1
+Prority number : 39894
+Parent number  : 39881
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 59,58,1
+Rightshore     : 41,39,0
+Prority number : 39881
+Parent number  : 39835
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 59,56,0
+Rightshore     : 41,41,1
+Prority number : 39835
+Parent number  : 39769
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 59,57,1
+Rightshore     : 41,40,0
+Prority number : 39769
+Parent number  : 39267
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 58,56,0
+Rightshore     : 42,41,1
+Prority number : 39267
+Parent number  : 38621
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 59,56,1
+Rightshore     : 41,41,0
+Prority number : 38621
+Parent number  : 38303
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 57,56,0
+Rightshore     : 43,41,1
+Prority number : 38303
+Parent number  : 38144
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 57,57,1
+Rightshore     : 43,40,0
+Prority number : 38144
+Parent number  : 38078
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 57,55,0
+Rightshore     : 43,42,1
+Prority number : 38078
+Parent number  : 38052
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 58,55,1
+Rightshore     : 42,42,0
+Prority number : 38052
+Parent number  : 38041
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 56,55,0
+Rightshore     : 44,42,1
+Prority number : 38041
+Parent number  : 38037
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 56,56,1
+Rightshore     : 44,41,0
+Prority number : 38037
+Parent number  : 37907
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 56,54,0
+Rightshore     : 44,43,1
+Prority number : 37907
+Parent number  : 37798
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 56,55,1
+Rightshore     : 44,42,0
+Prority number : 37798
+Parent number  : 37480
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 56,53,0
+Rightshore     : 44,44,1
+Prority number : 37480
+Parent number  : 37158
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 56,54,1
+Rightshore     : 44,43,0
+Prority number : 37158
+Parent number  : 36837
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 55,53,0
+Rightshore     : 45,44,1
+Prority number : 36837
+Parent number  : 36701
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 56,53,1
+Rightshore     : 44,44,0
+Prority number : 36701
+Parent number  : 36616
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 54,53,0
+Rightshore     : 46,44,1
+Prority number : 36616
+Parent number  : 36579
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 54,54,1
+Rightshore     : 46,43,0
+Prority number : 36579
+Parent number  : 36549
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 54,52,0
+Rightshore     : 46,45,1
+Prority number : 36549
+Parent number  : 36536
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 54,53,1
+Rightshore     : 46,44,0
+Prority number : 36536
+Parent number  : 36490
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 54,51,0
+Rightshore     : 46,46,1
+Prority number : 36490
+Parent number  : 36424
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 54,52,1
+Rightshore     : 46,45,0
+Prority number : 36424
+Parent number  : 35922
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 53,51,0
+Rightshore     : 47,46,1
+Prority number : 35922
+Parent number  : 35276
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 54,51,1
+Rightshore     : 46,46,0
+Prority number : 35276
+Parent number  : 34958
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 52,51,0
+Rightshore     : 48,46,1
+Prority number : 34958
+Parent number  : 34799
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 52,52,1
+Rightshore     : 48,45,0
+Prority number : 34799
+Parent number  : 34733
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 52,50,0
+Rightshore     : 48,47,1
+Prority number : 34733
+Parent number  : 34707
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 53,50,1
+Rightshore     : 47,47,0
+Prority number : 34707
+Parent number  : 34696
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 51,50,0
+Rightshore     : 49,47,1
+Prority number : 34696
+Parent number  : 34692
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 51,51,1
+Rightshore     : 49,46,0
+Prority number : 34692
+Parent number  : 34562
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 51,49,0
+Rightshore     : 49,48,1
+Prority number : 34562
+Parent number  : 34453
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 51,50,1
+Rightshore     : 49,47,0
+Prority number : 34453
+Parent number  : 34135
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 51,48,0
+Rightshore     : 49,49,1
+Prority number : 34135
+Parent number  : 33813
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 51,49,1
+Rightshore     : 49,48,0
+Prority number : 33813
+Parent number  : 33492
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 50,48,0
+Rightshore     : 50,49,1
+Prority number : 33492
+Parent number  : 33356
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 51,48,1
+Rightshore     : 49,49,0
+Prority number : 33356
+Parent number  : 33271
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 49,48,0
+Rightshore     : 51,49,1
+Prority number : 33271
+Parent number  : 33234
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 49,49,1
+Rightshore     : 51,48,0
+Prority number : 33234
+Parent number  : 33204
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 49,47,0
+Rightshore     : 51,50,1
+Prority number : 33204
+Parent number  : 33191
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 49,48,1
+Rightshore     : 51,49,0
+Prority number : 33191
+Parent number  : 33145
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 49,46,0
+Rightshore     : 51,51,1
+Prority number : 33145
+Parent number  : 33079
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 49,47,1
+Rightshore     : 51,50,0
+Prority number : 33079
+Parent number  : 32577
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 48,46,0
+Rightshore     : 52,51,1
+Prority number : 32577
+Parent number  : 31931
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 49,46,1
+Rightshore     : 51,51,0
+Prority number : 31931
+Parent number  : 31613
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 47,46,0
+Rightshore     : 53,51,1
+Prority number : 31613
+Parent number  : 31454
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 47,47,1
+Rightshore     : 53,50,0
+Prority number : 31454
+Parent number  : 31388
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 47,45,0
+Rightshore     : 53,52,1
+Prority number : 31388
+Parent number  : 31362
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 48,45,1
+Rightshore     : 52,52,0
+Prority number : 31362
+Parent number  : 31351
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 46,45,0
+Rightshore     : 54,52,1
+Prority number : 31351
+Parent number  : 31347
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 46,46,1
+Rightshore     : 54,51,0
+Prority number : 31347
+Parent number  : 31217
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 46,44,0
+Rightshore     : 54,53,1
+Prority number : 31217
+Parent number  : 31108
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 46,45,1
+Rightshore     : 54,52,0
+Prority number : 31108
+Parent number  : 30790
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 46,43,0
+Rightshore     : 54,54,1
+Prority number : 30790
+Parent number  : 30468
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 46,44,1
+Rightshore     : 54,53,0
+Prority number : 30468
+Parent number  : 30147
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 45,43,0
+Rightshore     : 55,54,1
+Prority number : 30147
+Parent number  : 30011
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 46,43,1
+Rightshore     : 54,54,0
+Prority number : 30011
+Parent number  : 29926
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 44,43,0
+Rightshore     : 56,54,1
+Prority number : 29926
+Parent number  : 29889
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 44,44,1
+Rightshore     : 56,53,0
+Prority number : 29889
+Parent number  : 29859
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 44,42,0
+Rightshore     : 56,55,1
+Prority number : 29859
+Parent number  : 29846
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 44,43,1
+Rightshore     : 56,54,0
+Prority number : 29846
+Parent number  : 29800
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 44,41,0
+Rightshore     : 56,56,1
+Prority number : 29800
+Parent number  : 29734
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 44,42,1
+Rightshore     : 56,55,0
+Prority number : 29734
+Parent number  : 29232
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 43,41,0
+Rightshore     : 57,56,1
+Prority number : 29232
+Parent number  : 28586
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 44,41,1
+Rightshore     : 56,56,0
+Prority number : 28586
+Parent number  : 28268
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 42,41,0
+Rightshore     : 58,56,1
+Prority number : 28268
+Parent number  : 28109
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 42,42,1
+Rightshore     : 58,55,0
+Prority number : 28109
+Parent number  : 28043
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 42,40,0
+Rightshore     : 58,57,1
+Prority number : 28043
+Parent number  : 28017
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 43,40,1
+Rightshore     : 57,57,0
+Prority number : 28017
+Parent number  : 28006
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 41,40,0
+Rightshore     : 59,57,1
+Prority number : 28006
+Parent number  : 28002
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 41,41,1
+Rightshore     : 59,56,0
+Prority number : 28002
+Parent number  : 27872
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 41,39,0
+Rightshore     : 59,58,1
+Prority number : 27872
+Parent number  : 27763
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 41,40,1
+Rightshore     : 59,57,0
+Prority number : 27763
+Parent number  : 27445
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 41,38,0
+Rightshore     : 59,59,1
+Prority number : 27445
+Parent number  : 27123
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 41,39,1
+Rightshore     : 59,58,0
+Prority number : 27123
+Parent number  : 26802
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 40,38,0
+Rightshore     : 60,59,1
+Prority number : 26802
+Parent number  : 26666
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 41,38,1
+Rightshore     : 59,59,0
+Prority number : 26666
+Parent number  : 26581
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 39,38,0
+Rightshore     : 61,59,1
+Prority number : 26581
+Parent number  : 26544
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 39,39,1
+Rightshore     : 61,58,0
+Prority number : 26544
+Parent number  : 26514
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 39,37,0
+Rightshore     : 61,60,1
+Prority number : 26514
+Parent number  : 26501
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 39,38,1
+Rightshore     : 61,59,0
+Prority number : 26501
+Parent number  : 26455
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 39,36,0
+Rightshore     : 61,61,1
+Prority number : 26455
+Parent number  : 26389
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 39,37,1
+Rightshore     : 61,60,0
+Prority number : 26389
+Parent number  : 25887
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 38,36,0
+Rightshore     : 62,61,1
+Prority number : 25887
+Parent number  : 25241
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 39,36,1
+Rightshore     : 61,61,0
+Prority number : 25241
+Parent number  : 24923
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 37,36,0
+Rightshore     : 63,61,1
+Prority number : 24923
+Parent number  : 24764
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 37,37,1
+Rightshore     : 63,60,0
+Prority number : 24764
+Parent number  : 24698
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 37,35,0
+Rightshore     : 63,62,1
+Prority number : 24698
+Parent number  : 24672
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 38,35,1
+Rightshore     : 62,62,0
+Prority number : 24672
+Parent number  : 24661
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 36,35,0
+Rightshore     : 64,62,1
+Prority number : 24661
+Parent number  : 24657
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 36,36,1
+Rightshore     : 64,61,0
+Prority number : 24657
+Parent number  : 24527
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 36,34,0
+Rightshore     : 64,63,1
+Prority number : 24527
+Parent number  : 24418
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 36,35,1
+Rightshore     : 64,62,0
+Prority number : 24418
+Parent number  : 24100
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 36,33,0
+Rightshore     : 64,64,1
+Prority number : 24100
+Parent number  : 23778
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 36,34,1
+Rightshore     : 64,63,0
+Prority number : 23778
+Parent number  : 23457
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 35,33,0
+Rightshore     : 65,64,1
+Prority number : 23457
+Parent number  : 23321
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 36,33,1
+Rightshore     : 64,64,0
+Prority number : 23321
+Parent number  : 23236
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 34,33,0
+Rightshore     : 66,64,1
+Prority number : 23236
+Parent number  : 23199
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 34,34,1
+Rightshore     : 66,63,0
+Prority number : 23199
+Parent number  : 23169
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 34,32,0
+Rightshore     : 66,65,1
+Prority number : 23169
+Parent number  : 23156
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 34,33,1
+Rightshore     : 66,64,0
+Prority number : 23156
+Parent number  : 23110
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 34,31,0
+Rightshore     : 66,66,1
+Prority number : 23110
+Parent number  : 23044
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 34,32,1
+Rightshore     : 66,65,0
+Prority number : 23044
+Parent number  : 22542
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 33,31,0
+Rightshore     : 67,66,1
+Prority number : 22542
+Parent number  : 21896
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 34,31,1
+Rightshore     : 66,66,0
+Prority number : 21896
+Parent number  : 21578
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 32,31,0
+Rightshore     : 68,66,1
+Prority number : 21578
+Parent number  : 21419
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 32,32,1
+Rightshore     : 68,65,0
+Prority number : 21419
+Parent number  : 21353
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 32,30,0
+Rightshore     : 68,67,1
+Prority number : 21353
+Parent number  : 21327
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 33,30,1
+Rightshore     : 67,67,0
+Prority number : 21327
+Parent number  : 21316
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 31,30,0
+Rightshore     : 69,67,1
+Prority number : 21316
+Parent number  : 21312
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 31,31,1
+Rightshore     : 69,66,0
+Prority number : 21312
+Parent number  : 21182
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 31,29,0
+Rightshore     : 69,68,1
+Prority number : 21182
+Parent number  : 21073
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 31,30,1
+Rightshore     : 69,67,0
+Prority number : 21073
+Parent number  : 20755
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 31,28,0
+Rightshore     : 69,69,1
+Prority number : 20755
+Parent number  : 20433
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 31,29,1
+Rightshore     : 69,68,0
+Prority number : 20433
+Parent number  : 20112
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 30,28,0
+Rightshore     : 70,69,1
+Prority number : 20112
+Parent number  : 19976
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 31,28,1
+Rightshore     : 69,69,0
+Prority number : 19976
+Parent number  : 19891
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 29,28,0
+Rightshore     : 71,69,1
+Prority number : 19891
+Parent number  : 19854
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 29,29,1
+Rightshore     : 71,68,0
+Prority number : 19854
+Parent number  : 19824
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 29,27,0
+Rightshore     : 71,70,1
+Prority number : 19824
+Parent number  : 19811
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 29,28,1
+Rightshore     : 71,69,0
+Prority number : 19811
+Parent number  : 19765
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 29,26,0
+Rightshore     : 71,71,1
+Prority number : 19765
+Parent number  : 19699
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 29,27,1
+Rightshore     : 71,70,0
+Prority number : 19699
+Parent number  : 19197
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 28,26,0
+Rightshore     : 72,71,1
+Prority number : 19197
+Parent number  : 18551
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 29,26,1
+Rightshore     : 71,71,0
+Prority number : 18551
+Parent number  : 18233
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 27,26,0
+Rightshore     : 73,71,1
+Prority number : 18233
+Parent number  : 18074
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 27,27,1
+Rightshore     : 73,70,0
+Prority number : 18074
+Parent number  : 18008
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 27,25,0
+Rightshore     : 73,72,1
+Prority number : 18008
+Parent number  : 17982
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 28,25,1
+Rightshore     : 72,72,0
+Prority number : 17982
+Parent number  : 17971
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 26,25,0
+Rightshore     : 74,72,1
+Prority number : 17971
+Parent number  : 17967
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 26,26,1
+Rightshore     : 74,71,0
+Prority number : 17967
+Parent number  : 17837
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 26,24,0
+Rightshore     : 74,73,1
+Prority number : 17837
+Parent number  : 17728
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 26,25,1
+Rightshore     : 74,72,0
+Prority number : 17728
+Parent number  : 17410
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 26,23,0
+Rightshore     : 74,74,1
+Prority number : 17410
+Parent number  : 17088
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 26,24,1
+Rightshore     : 74,73,0
+Prority number : 17088
+Parent number  : 16767
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 25,23,0
+Rightshore     : 75,74,1
+Prority number : 16767
+Parent number  : 16631
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 26,23,1
+Rightshore     : 74,74,0
+Prority number : 16631
+Parent number  : 16546
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 24,23,0
+Rightshore     : 76,74,1
+Prority number : 16546
+Parent number  : 16509
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 24,24,1
+Rightshore     : 76,73,0
+Prority number : 16509
+Parent number  : 16479
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 24,22,0
+Rightshore     : 76,75,1
+Prority number : 16479
+Parent number  : 16466
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 24,23,1
+Rightshore     : 76,74,0
+Prority number : 16466
+Parent number  : 16420
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 24,21,0
+Rightshore     : 76,76,1
+Prority number : 16420
+Parent number  : 16354
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 24,22,1
+Rightshore     : 76,75,0
+Prority number : 16354
+Parent number  : 15852
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 23,21,0
+Rightshore     : 77,76,1
+Prority number : 15852
+Parent number  : 15206
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 24,21,1
+Rightshore     : 76,76,0
+Prority number : 15206
+Parent number  : 14888
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 22,21,0
+Rightshore     : 78,76,1
+Prority number : 14888
+Parent number  : 14729
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 22,22,1
+Rightshore     : 78,75,0
+Prority number : 14729
+Parent number  : 14663
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 22,20,0
+Rightshore     : 78,77,1
+Prority number : 14663
+Parent number  : 14637
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 23,20,1
+Rightshore     : 77,77,0
+Prority number : 14637
+Parent number  : 14626
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 21,20,0
+Rightshore     : 79,77,1
+Prority number : 14626
+Parent number  : 14622
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 21,21,1
+Rightshore     : 79,76,0
+Prority number : 14622
+Parent number  : 14492
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 21,19,0
+Rightshore     : 79,78,1
+Prority number : 14492
+Parent number  : 14383
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 21,20,1
+Rightshore     : 79,77,0
+Prority number : 14383
+Parent number  : 14065
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 21,18,0
+Rightshore     : 79,79,1
+Prority number : 14065
+Parent number  : 13743
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 21,19,1
+Rightshore     : 79,78,0
+Prority number : 13743
+Parent number  : 13422
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 20,18,0
+Rightshore     : 80,79,1
+Prority number : 13422
+Parent number  : 13286
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 21,18,1
+Rightshore     : 79,79,0
+Prority number : 13286
+Parent number  : 13201
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 19,18,0
+Rightshore     : 81,79,1
+Prority number : 13201
+Parent number  : 13164
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 19,19,1
+Rightshore     : 81,78,0
+Prority number : 13164
+Parent number  : 13134
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 19,17,0
+Rightshore     : 81,80,1
+Prority number : 13134
+Parent number  : 13121
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 19,18,1
+Rightshore     : 81,79,0
+Prority number : 13121
+Parent number  : 13075
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 19,16,0
+Rightshore     : 81,81,1
+Prority number : 13075
+Parent number  : 13009
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 19,17,1
+Rightshore     : 81,80,0
+Prority number : 13009
+Parent number  : 12507
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 18,16,0
+Rightshore     : 82,81,1
+Prority number : 12507
+Parent number  : 11861
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 19,16,1
+Rightshore     : 81,81,0
+Prority number : 11861
+Parent number  : 11543
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 17,16,0
+Rightshore     : 83,81,1
+Prority number : 11543
+Parent number  : 11384
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 17,17,1
+Rightshore     : 83,80,0
+Prority number : 11384
+Parent number  : 11318
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 17,15,0
+Rightshore     : 83,82,1
+Prority number : 11318
+Parent number  : 11292
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 18,15,1
+Rightshore     : 82,82,0
+Prority number : 11292
+Parent number  : 11281
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 16,15,0
+Rightshore     : 84,82,1
+Prority number : 11281
+Parent number  : 11277
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 16,16,1
+Rightshore     : 84,81,0
+Prority number : 11277
+Parent number  : 11147
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 16,14,0
+Rightshore     : 84,83,1
+Prority number : 11147
+Parent number  : 11038
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 16,15,1
+Rightshore     : 84,82,0
+Prority number : 11038
+Parent number  : 10720
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 16,13,0
+Rightshore     : 84,84,1
+Prority number : 10720
+Parent number  : 10398
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 16,14,1
+Rightshore     : 84,83,0
+Prority number : 10398
+Parent number  : 10077
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 15,13,0
+Rightshore     : 85,84,1
+Prority number : 10077
+Parent number  : 9941
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 16,13,1
+Rightshore     : 84,84,0
+Prority number : 9941
+Parent number  : 9856
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 14,13,0
+Rightshore     : 86,84,1
+Prority number : 9856
+Parent number  : 9819
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 14,14,1
+Rightshore     : 86,83,0
+Prority number : 9819
+Parent number  : 9789
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 14,12,0
+Rightshore     : 86,85,1
+Prority number : 9789
+Parent number  : 9776
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 14,13,1
+Rightshore     : 86,84,0
+Prority number : 9776
+Parent number  : 9730
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 14,11,0
+Rightshore     : 86,86,1
+Prority number : 9730
+Parent number  : 9664
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 14,12,1
+Rightshore     : 86,85,0
+Prority number : 9664
+Parent number  : 9162
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 13,11,0
+Rightshore     : 87,86,1
+Prority number : 9162
+Parent number  : 8516
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 14,11,1
+Rightshore     : 86,86,0
+Prority number : 8516
+Parent number  : 8198
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 12,11,0
+Rightshore     : 88,86,1
+Prority number : 8198
+Parent number  : 8039
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 12,12,1
+Rightshore     : 88,85,0
+Prority number : 8039
+Parent number  : 7973
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 12,10,0
+Rightshore     : 88,87,1
+Prority number : 7973
+Parent number  : 7947
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 13,10,1
+Rightshore     : 87,87,0
+Prority number : 7947
+Parent number  : 7936
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 11,10,0
+Rightshore     : 89,87,1
+Prority number : 7936
+Parent number  : 7932
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 11,11,1
+Rightshore     : 89,86,0
+Prority number : 7932
+Parent number  : 7806
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 11,9,0
+Rightshore     : 89,88,1
+Prority number : 7806
+Parent number  : 7695
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 11,10,1
+Rightshore     : 89,87,0
+Prority number : 7695
+Parent number  : 7368
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 11,8,0
+Rightshore     : 89,89,1
+Prority number : 7368
+Parent number  : 7037
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 11,9,1
+Rightshore     : 89,88,0
+Prority number : 7037
+Parent number  : 6716
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 10,8,0
+Rightshore     : 90,89,1
+Prority number : 6716
+Parent number  : 6580
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 11,8,1
+Rightshore     : 89,89,0
+Prority number : 6580
+Parent number  : 6495
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 9,8,0
+Rightshore     : 91,89,1
+Prority number : 6495
+Parent number  : 6458
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 9,9,1
+Rightshore     : 91,88,0
+Prority number : 6458
+Parent number  : 6428
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 9,7,0
+Rightshore     : 91,90,1
+Prority number : 6428
+Parent number  : 6415
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 9,8,1
+Rightshore     : 91,89,0
+Prority number : 6415
+Parent number  : 6377
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 9,6,0
+Rightshore     : 91,91,1
+Prority number : 6377
+Parent number  : 6319
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 9,7,1
+Rightshore     : 91,90,0
+Prority number : 6319
+Parent number  : 5838
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 8,6,0
+Rightshore     : 92,91,1
+Prority number : 5838
+Parent number  : 5185
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 9,6,1
+Rightshore     : 91,91,0
+Prority number : 5185
+Parent number  : 4853
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 7,6,0
+Rightshore     : 93,91,1
+Prority number : 4853
+Parent number  : 4685
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 7,7,1
+Rightshore     : 93,90,0
+Prority number : 4685
+Parent number  : 4617
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 7,5,0
+Rightshore     : 93,92,1
+Prority number : 4617
+Parent number  : 4590
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 8,5,1
+Rightshore     : 92,92,0
+Prority number : 4590
+Parent number  : 4579
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,5,0
+Rightshore     : 94,92,1
+Prority number : 4579
+Parent number  : 4575
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,6,1
+Rightshore     : 94,91,0
+Prority number : 4575
+Parent number  : 4358
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,4,0
+Rightshore     : 94,93,1
+Prority number : 4358
+Parent number  : 4249
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,5,1
+Rightshore     : 94,92,0
+Prority number : 4249
+Parent number  : 3955
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,3,0
+Rightshore     : 94,94,1
+Prority number : 3955
+Parent number  : 3789
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,4,1
+Rightshore     : 94,93,0
+Prority number : 3789
+Parent number  : 3653
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 5,3,0
+Rightshore     : 95,94,1
+Prority number : 3653
+Parent number  : 3598
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 5,4,1
+Rightshore     : 95,93,0
+Prority number : 3598
+Parent number  : 2958
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 5,2,0
+Rightshore     : 95,95,1
+Prority number : 2958
+Parent number  : 2584
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 5,3,1
+Rightshore     : 95,94,0
+Prority number : 2584
+Parent number  : 2388
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 4,2,0
+Rightshore     : 96,95,1
+Prority number : 2388
+Parent number  : 2311
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 5,2,1
+Rightshore     : 95,95,0
+Prority number : 2311
+Parent number  : 1784
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,2,0
+Rightshore     : 97,95,1
+Prority number : 1784
+Parent number  : 1257
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,3,1
+Rightshore     : 97,94,0
+Prority number : 1257
+Parent number  : 537
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,1,0
+Rightshore     : 97,96,1
+Prority number : 537
+Parent number  : 269
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 4,1,1
+Rightshore     : 96,96,0
+Prority number : 269
+Parent number  : 113
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 2,1,0
+Rightshore     : 98,96,1
+Prority number : 113
+Parent number  : 46
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 2,2,1
+Rightshore     : 98,95,0
+Prority number : 46
+Parent number  : 22
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 2,0,0
+Rightshore     : 98,97,1
+Prority number : 22
+Parent number  : 10
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,0,1
+Rightshore     : 97,97,0
+Prority number : 10
+Parent number  : 6
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 1,0,0
+Rightshore     : 99,97,1
+Prority number : 6
+Parent number  : 1
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 2,0,1
+Rightshore     : 98,97,0
+Prority number : 1
+Parent number  : 0
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+
+***ROOT NODE***
+**************************
+Leftshore      : 0,0,0
+Rightshore     : 100,97,1
+Prority number : 0
+Parent number  : 0
+Array Size     : 66763
+**************************
+
+***ROOT NODE***
+STEPS FROM ROOT TO SOLUTION : 391
+: END DFS SOLUTION :

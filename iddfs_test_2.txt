@@ -1,0 +1,283 @@
+Tree Complete, Choose Search Algorithm.
+
+***SOLUTION FOUND IDDFS***
+Nodes Expanded in search 53
+: IDDFS SOLUTION :
+**************************
+Leftshore      : 11,7,1
+Rightshore     : 0,0,0
+Prority number : 6445
+Parent number  : 5784
+Array Size     : 2966
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 10,6,0
+Rightshore     : 1,1,1
+Prority number : 5784
+Parent number  : 5502
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 11,6,1
+Rightshore     : 0,1,0
+Prority number : 5502
+Parent number  : 5362
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 9,6,0
+Rightshore     : 2,1,1
+Prority number : 5362
+Parent number  : 5309
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 10,6,1
+Rightshore     : 1,1,0
+Prority number : 5309
+Parent number  : 5277
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 8,6,0
+Rightshore     : 3,1,1
+Prority number : 5277
+Parent number  : 5263
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 8,7,1
+Rightshore     : 3,0,0
+Prority number : 5263
+Parent number  : 5252
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 8,5,0
+Rightshore     : 3,2,1
+Prority number : 5252
+Parent number  : 5246
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 8,6,1
+Rightshore     : 3,1,0
+Prority number : 5246
+Parent number  : 5240
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 8,4,0
+Rightshore     : 3,3,1
+Prority number : 5240
+Parent number  : 5232
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 8,5,1
+Rightshore     : 3,2,0
+Prority number : 5232
+Parent number  : 4992
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 7,4,0
+Rightshore     : 4,3,1
+Prority number : 4992
+Parent number  : 4910
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 7,5,1
+Rightshore     : 4,2,0
+Prority number : 4910
+Parent number  : 4714
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 7,3,0
+Rightshore     : 4,4,1
+Prority number : 4714
+Parent number  : 4592
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 7,4,1
+Rightshore     : 4,3,0
+Prority number : 4592
+Parent number  : 4358
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,3,0
+Rightshore     : 5,4,1
+Prority number : 4358
+Parent number  : 4278
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,4,1
+Rightshore     : 5,3,0
+Prority number : 4278
+Parent number  : 3603
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,2,0
+Rightshore     : 5,5,1
+Prority number : 3603
+Parent number  : 3130
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,3,1
+Rightshore     : 5,4,0
+Prority number : 3130
+Parent number  : 2834
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 5,2,0
+Rightshore     : 6,5,1
+Prority number : 2834
+Parent number  : 2735
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 6,2,1
+Rightshore     : 5,5,0
+Prority number : 2735
+Parent number  : 2695
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 4,2,0
+Rightshore     : 7,5,1
+Prority number : 2695
+Parent number  : 2682
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 5,2,1
+Rightshore     : 6,5,0
+Prority number : 2682
+Parent number  : 2016
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,2,0
+Rightshore     : 8,5,1
+Prority number : 2016
+Parent number  : 1439
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 4,2,1
+Rightshore     : 7,5,0
+Prority number : 1439
+Parent number  : 599
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,1,0
+Rightshore     : 8,6,1
+Prority number : 599
+Parent number  : 280
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,2,1
+Rightshore     : 8,5,0
+Prority number : 280
+Parent number  : 118
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,0,0
+Rightshore     : 8,7,1
+Prority number : 118
+Parent number  : 46
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 4,0,1
+Rightshore     : 7,7,0
+Prority number : 46
+Parent number  : 22
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 2,0,0
+Rightshore     : 9,7,1
+Prority number : 22
+Parent number  : 10
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 3,0,1
+Rightshore     : 8,7,0
+Prority number : 10
+Parent number  : 6
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 1,0,0
+Rightshore     : 10,7,1
+Prority number : 6
+Parent number  : 1
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+**************************
+Leftshore      : 2,0,1
+Rightshore     : 9,7,0
+Prority number : 1
+Parent number  : 0
+**************************
+
+CHILD ABOVE |*| PARENT BELOW
+
+***ROOT NODE***
+**************************
+Leftshore      : 0,0,0
+Rightshore     : 11,7,1
+Prority number : 0
+Parent number  : 0
+Array Size     : 6446
+**************************
+
+***ROOT NODE***
+STEPS FROM ROOT TO SOLUTION : 33
+: END IDDFS SOLUTION :

@@ -22,6 +22,11 @@ using namespace std;
 #define PRINTEND	false //false or true
 #endif
 
+#ifndef PRINTFILE
+#define PRINTFILE	true //false or true
+#endif
+
+
 
 void playerChoice(item* arr, string choiceAlg) {
     if(SKIPCHOICE){
@@ -209,13 +214,13 @@ int main(int argc,char* argv[])
 
     printf("PRINTING TO %s \n", argv[4]);
     printf("Please wait, creating tree...\n");
-    freopen(argv[4], "w", stdout);
+    if (PRINTFILE) freopen(argv[4], "w", stdout);
     item* priorityGraph = graphmaker(rightShore, leftShore);
     if (PRINTEND)print_array(priorityGraph);
     printf("Tree Complete, Choose Search Algorithm.\n");
     playerChoice(priorityGraph, choiceAlg);
      //close the file object
-    fclose(stdout);
+    if (PRINTFILE) fclose(stdout);
 
     
 

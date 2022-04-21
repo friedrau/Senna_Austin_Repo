@@ -21,11 +21,19 @@ using namespace std;
 #endif
 
 #ifndef LITE //a lighter version of checking if the last node is correct.
-#define LITE	false //false or true
+#define LITE	true //false or true
 #endif
 
 #ifndef HEAVY //to make sure that the ending node is the correct node.
-#define HEAVY	true //false or true
+#define HEAVY	false //false or true
+#endif
+
+#ifndef CHECKWINCON //to make sure that the ending node is the correct node.
+#define CHECKWINCON	false //false or true
+#endif
+
+#ifndef VALUEENGINEDEBUG //to make sure that the ending node is the correct node.
+#define VALUEENGINEDEBUG	false //false or true
 #endif
 
 int nodesExp(bool* visited, int size) {
@@ -412,14 +420,16 @@ bool isValid(item newMove) {
 
 //see if current win con is a valid win con
 bool winConLite(item newMove) {
-    if (
-        newMove.rightShore[0] == 0 &&
-        newMove.rightShore[1] == 0 &&
-        newMove.rightShore[2] == 0
-        ) {
+    if (newMove.rightShore[0] == 0 && newMove.rightShore[1] == 0 && newMove.rightShore[2] == 0) {
+
+        if (CHECKWINCON) printf("ITEM IN WINCON");
+
+        if (CHECKWINCON) print_item(newMove);
+
         return true;
-    }
-    else {
+
+    } else {
+
         return false;
     }
 }
@@ -494,6 +504,9 @@ void winConPrint(item* history, item newMove) {
             for (int i = 0; i < rows; i++) {
 
                 if (newMove.parent == 0) { //if parent is root node then we have our solution
+
+                    print_item(newMove);
+                    printf("\nCHILD ABOVE |*| PARENT BELOW\n");
                     counter++;
                     newMove = history[0];
                     //ROOT NODE
@@ -545,6 +558,9 @@ int distanceFromRoot(item* history, item newMove) {
         if (newMove.parent == history[i].priority) {
             counter++;
             newMove = history[i];
+            if (isValid(newMove)) {
+                i = 0;
+            }
         }
     }
     return counter;
@@ -569,7 +585,7 @@ item graphCombo(item* history, item newMove) { //modifies item if items value is
 // 1.)check to see if move allready existed in list if so then change priority number to match old listing.
 item* addNewItem(item* returnArray, item newMove, item currentMove, int counter) { //modifies item if items value is == to a previous value, 
     newMove.parent = currentMove.priority;
-    //if (compaireItem(newMove, returnArray[0])) return returnArray; //if move is base node.
+    if (compaireItem(newMove, returnArray[0])) return returnArray; //if move is base node.
     if (compaireItem(newMove, returnArray[returnArray[newMove.parent].parent])) return returnArray; //if move is repeat
     newMove.priority = counter;//increment counter to keep track of prority
     newMove = graphCombo(returnArray,newMove); //check to see if move allready existed in list if so then change priority number to match old listing.
@@ -580,11 +596,25 @@ item* addNewItem(item* returnArray, item newMove, item currentMove, int counter)
 
 //item* iddfs
 
+//calculates score for current move, if score is less then current score then discard this move.
+int valueEngine(item newMove) {
+    int a, b, c, d;
+    a = newMove.leftShore[1];
+    b = newMove.leftShore[0];
+    
+    c = newMove.rightShore[0];
+    d = newMove.rightShore[1];
+
+    int score = (a + b) - (c + a);
+
+
+    return score;
+
+}
+
 
 //Graphmaker makes a graph with this the conditions set by the input file
 //Makes graph and tree branches defined by rules set by chick wolf boat
-
-
 item* graphmaker(int * arrStart,int * arrEnd) {
 
   //Set up fist array
@@ -611,235 +641,301 @@ item* graphmaker(int * arrStart,int * arrEnd) {
   int loopCounter = 0; //keeps track of returnArray index
   //this loop creates a min heap. where 0 is the top of the que and inc as the que grows
   bool winCondition = false;
+
+  int valueEngineScore = valueEngine(startingValues);//this function seeks to improve space complexity by having a weight. If so many moves pass value engine increments forcing animals across the shore.
+  int tolorance;
+  item BestItem = startingValues; // keeps track of best item, if best item is only remaining item and return arrsize > 
+  item currentMove = returnArray[0];
   while(loop) {
-      item currentMove = returnArray[loopCounter];
-      int parent = currentMove.parent;
-      int priority = currentMove.priority;
-      currentMove.arrSize = 0; //change arraySize to zero because not first element
+      if (!(loopCounter >= returnArray[0].arrSize)) {//make sure that element is valid.
+          currentMove = returnArray[loopCounter];
+          int parent = currentMove.parent;
+          int priority = currentMove.priority;
+          currentMove.arrSize = 0; //change arraySize to zero because not first element
+      }
       //*********************twochick 
-      if(twochick(currentMove)) {
-          if (DEBUG) printf("SELECTING TWO CHICKS\n");
-          //Make new move
-          item newMove = currentMove;
-          //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
-          if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
-              //move animal
-              newMove.leftShore[0] = (newMove.leftShore[0] - 2);
-              newMove.rightShore[0] = (newMove.rightShore[0] + 2);
-              //move boat
-              newMove.rightShore[2] = 1;
-              newMove.leftShore[2] = 0;
+      if(VALUEENGINEDEBUG) printf("SCORE currentMove: %d\n", valueEngine(currentMove));
+      if(VALUEENGINEDEBUG) printf("valueEngineScore: %d\n", valueEngineScore);
+      if(VALUEENGINEDEBUG) printf("tolorance: %d\n", tolorance);
+      if(VALUEENGINEDEBUG) printf("loopCounter: %d\n", loopCounter);
+      if(VALUEENGINEDEBUG) printf("ArraySize %d\n", returnArray[0].arrSize);
+
+      //if the array dosent have items with value engine scores high enough, take the best scoring item and add that to array.
+      if (loopCounter - 1 >= returnArray[0].arrSize) {
+          loopCounter--;//decrement counter by 1
+          valueEngineScore = valueEngine(BestItem) - 4; // free up score to make moves.
+          if (VALUEENGINEDEBUG) printf("\nValueEngine Exceeded Array Size setting valueEngineScore to %d from %d \n", valueEngineScore, valueEngineScore+2);
+          tolorance = 0;
+          //set size
+          int size = returnArray[0].arrSize;
+          returnArray = addNewItem(returnArray, BestItem, currentMove, counter);
+          int size2 = returnArray[0].arrSize;
+          if (size < size2) {
+              counter++;
           }
-          else { //check if boat left or right : Right here
-              //move animal
-              newMove.leftShore[0] = newMove.leftShore[0] + 2;
-              newMove.rightShore[0] = newMove.rightShore[0] - 2;
-              //move boat
-              newMove.rightShore[2] = 0;
-              newMove.leftShore[2] = 1;
+      }
+
+    if (valueEngine(currentMove) >= valueEngineScore) {
+        if (valueEngine(currentMove) > valueEngine(BestItem)) {
+
+            if (isValid(currentMove)) {
+
+                BestItem = currentMove;
+
+            }
+        }
+          
+      
+
+          //printf("CURRENT MOVE\n");
+         if (VALUEENGINEDEBUG) print_item(currentMove);
+          tolorance++;// tolorence is the number of tems able to be checked before incrementing value engine
+          //doing this allows for options that are nearer to the goal.
+
+          if (tolorance > 100) {
+              valueEngineScore = valueEngineScore + 1;//squeeze graph to force solutions.
+              tolorance = 0;
+
           }
-          if (isValid(newMove)) {
-              int size = returnArray[0].arrSize;
-              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              int size2 = returnArray[0].arrSize;
+
+
+          if(twochick(currentMove)) {
+              if (DEBUG) printf("SELECTING TWO CHICKS\n");
+              //Make new move
+              item newMove = currentMove;
+              //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
+              if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
+                  //move animal
+                  newMove.leftShore[0] = (newMove.leftShore[0] - 2);
+                  newMove.rightShore[0] = (newMove.rightShore[0] + 2);
+                  //move boat
+                  newMove.rightShore[2] = 1;
+                  newMove.leftShore[2] = 0;
+              }
+              else { //check if boat left or right : Right here
+                  //move animal
+                  newMove.leftShore[0] = newMove.leftShore[0] + 2;
+                  newMove.rightShore[0] = newMove.rightShore[0] - 2;
+                  //move boat
+                  newMove.rightShore[2] = 0;
+                  newMove.leftShore[2] = 1;
+              }
+              if (isValid(newMove)) {
+                  if (LITE) winCondition = winConLite(newMove);
+                  int size = returnArray[0].arrSize;
+                  returnArray = addNewItem(returnArray, newMove, currentMove, counter);
+                  int size2 = returnArray[0].arrSize;
+                      if (size < size2) {
+                          counter++;
+                      }
+                      if (LITE) winCondition = winConLite(newMove);
+                      if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+                  if (winCondition == true) {
+                      loop = false;
+                      //break;
+                  }
+              }
+          }
+
+
+          //*********************onechick 
+          if (onechick(currentMove)) {
+              if (DEBUG) printf("SELECTING ONE CHICKS\n");
+              //Make new move
+              item newMove = currentMove;
+              //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
+              if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
+                  //move animal
+                  newMove.leftShore[0] = (newMove.leftShore[0] - 1);
+                  newMove.rightShore[0] = (newMove.rightShore[0] + 1);
+                  //move boat
+                  newMove.rightShore[2] = 1;
+                  newMove.leftShore[2] = 0;
+              }
+              else { //check if boat left or right : Right here
+                  //move animal
+                  newMove.leftShore[0] = newMove.leftShore[0] + 1;
+                  newMove.rightShore[0] = newMove.rightShore[0] - 1;
+                  //move boat
+                  newMove.rightShore[2] = 0;
+                  newMove.leftShore[2] = 1;
+              }
+              if (isValid(newMove)) {
+                  if (LITE) winCondition = winConLite(newMove);
+                  int size = returnArray[0].arrSize;
+                  returnArray = addNewItem(returnArray, newMove, currentMove, counter);
+                  int size2 = returnArray[0].arrSize;
                   if (size < size2) {
                       counter++;
                   }
+                  //if (LITE) winCondition = winConLite(newMove);
+                  //if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+                  if (winCondition == true) {
+                      loop = false;
+                      //break;
+                  }
+              }
+          }
+
+          //*********************twowolf 
+          if (twowolf(currentMove)) {
+              if (DEBUG) printf("SELECTING TWO WOLFS\n");
+              //Make new move
+              item newMove = currentMove;
+              //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
+              if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
+                  //move animal
+                  newMove.leftShore[1] = (newMove.leftShore[1] - 2);
+                  newMove.rightShore[1] = (newMove.rightShore[1] + 2);
+                  //move boat
+                  newMove.rightShore[2] = 1;
+                  newMove.leftShore[2] = 0;
+              }
+              else { //check if boat left or right : Right here
+                  //move animal
+                  newMove.leftShore[1] = newMove.leftShore[1] + 2;
+                  newMove.rightShore[1] = newMove.rightShore[1] - 2;
+                  //move boat
+                  newMove.rightShore[2] = 0;
+                  newMove.leftShore[2] = 1;
+              }
+              if (isValid(newMove)) {
                   if (LITE) winCondition = winConLite(newMove);
-                  if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
-              if (winCondition == true) {
-                  break;
-              }
-          }
-      }
-
-
-      //*********************onechick 
-      if (onechick(currentMove)) {
-          if (DEBUG) printf("SELECTING ONE CHICKS\n");
-          //Make new move
-          item newMove = currentMove;
-          //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
-          if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
-              //move animal
-              newMove.leftShore[0] = (newMove.leftShore[0] - 1);
-              newMove.rightShore[0] = (newMove.rightShore[0] + 1);
-              //move boat
-              newMove.rightShore[2] = 1;
-              newMove.leftShore[2] = 0;
-          }
-          else { //check if boat left or right : Right here
-              //move animal
-              newMove.leftShore[0] = newMove.leftShore[0] + 1;
-              newMove.rightShore[0] = newMove.rightShore[0] - 1;
-              //move boat
-              newMove.rightShore[2] = 0;
-              newMove.leftShore[2] = 1;
-          }
-          if (isValid(newMove)) {
-              int size = returnArray[0].arrSize;
-              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              int size2 = returnArray[0].arrSize;
-              if (size < size2) {
-                  counter++;
-              }
-              if (LITE) winCondition = winConLite(newMove);
-              if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
-              if (winCondition == true) {
-                  break;
-              }
-          }
-      }
-
-      //*********************twowolf 
-      if (twowolf(currentMove)) {
-          if (DEBUG) printf("SELECTING TWO WOLFS\n");
-          //Make new move
-          item newMove = currentMove;
-          //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
-          if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
-              //move animal
-              newMove.leftShore[1] = (newMove.leftShore[1] - 2);
-              newMove.rightShore[1] = (newMove.rightShore[1] + 2);
-              //move boat
-              newMove.rightShore[2] = 1;
-              newMove.leftShore[2] = 0;
-          }
-          else { //check if boat left or right : Right here
-              //move animal
-              newMove.leftShore[1] = newMove.leftShore[1] + 2;
-              newMove.rightShore[1] = newMove.rightShore[1] - 2;
-              //move boat
-              newMove.rightShore[2] = 0;
-              newMove.leftShore[2] = 1;
-          }
-          if (isValid(newMove)) {
-              int size = returnArray[0].arrSize;
-              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              int size2 = returnArray[0].arrSize;
-              if (size < size2) {
-                  counter++;
-              }
-              if (LITE) winCondition = winConLite(newMove);
-              if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
-              if (winCondition == true) {
-                  break;
-              }
-          }
-      }
-
-      //*********************onewolf 
-      if (onewolf(currentMove)) {
-          if (DEBUG) printf("SELECTING ONE WOLFS\n");
-          //Make new move
-          item newMove = currentMove;
-          //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
-          if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
-              //move animal
-              newMove.leftShore[1] = (newMove.leftShore[1] - 1);
-              newMove.rightShore[1] = (newMove.rightShore[1] + 1);
-              //move boat
-              newMove.rightShore[2] = 1;
-              newMove.leftShore[2] = 0;
-          }
-          else { //check if boat left or right : Right here
-              //move animal
-              newMove.leftShore[1] = newMove.leftShore[1] + 1;
-              newMove.rightShore[1] = newMove.rightShore[1] - 1;
-              //move boat
-              newMove.rightShore[2] = 0;
-              newMove.leftShore[2] = 1;
-          }
-          if (isValid(newMove)) {
-              int size = returnArray[0].arrSize;
-              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              int size2 = returnArray[0].arrSize;
-              if (size < size2) {
-                  counter++;
-              }
-              if (LITE) winCondition = winConLite(newMove);
-              if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
-              if (winCondition == true) {
-                  break;
+                  int size = returnArray[0].arrSize;
+                  returnArray = addNewItem(returnArray, newMove, currentMove, counter);
+                  int size2 = returnArray[0].arrSize;
+                  if (size < size2) {
+                      counter++;
+                  }
+                  //if (LITE) winCondition = winConLite(newMove);
+                  //if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+                  if (winCondition == true) {
+                      loop = false;
+                      //break;
+                  }
               }
           }
 
-          //}
-      }
-
-
-
-      //*********************chickandwolf 
-      if (chickandwolf(currentMove)) {
-          if (DEBUG) printf("SELECTING ONE WOLFS ONE CHICK\n");
-          //Make new move
-          item newMove = currentMove;
-          //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
-          if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
-              //move animal
-              newMove.leftShore[1] = (newMove.leftShore[1] - 1);
-              newMove.rightShore[1] = (newMove.rightShore[1] + 1);
-              newMove.leftShore[0] = (newMove.leftShore[0] - 1);
-              newMove.rightShore[0] = (newMove.rightShore[0] + 1);
-              //move boat
-              newMove.rightShore[2] = 1;
-              newMove.leftShore[2] = 0;
-          }
-          else { //check if boat left or right : Right here
-              //move animal
-              newMove.leftShore[1] = newMove.leftShore[1] + 1;
-              newMove.rightShore[1] = newMove.rightShore[1] - 1;
-              newMove.leftShore[0] = newMove.leftShore[0] + 1;
-              newMove.rightShore[0] = newMove.rightShore[0] - 1;
-              //move boat
-              newMove.rightShore[2] = 0;
-              newMove.leftShore[2] = 1;
-          }
-          if (isValid(newMove)) {
-              int size = returnArray[0].arrSize;
-              returnArray = addNewItem(returnArray, newMove, currentMove, counter);
-              int size2 = returnArray[0].arrSize;
-              if (size < size2) {
-                  counter++;
+          //*********************onewolf 
+          if (onewolf(currentMove)) {
+              if (DEBUG) printf("SELECTING ONE WOLFS\n");
+              //Make new move
+              item newMove = currentMove;
+              //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
+              if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
+                  //move animal
+                  newMove.leftShore[1] = (newMove.leftShore[1] - 1);
+                  newMove.rightShore[1] = (newMove.rightShore[1] + 1);
+                  //move boat
+                  newMove.rightShore[2] = 1;
+                  newMove.leftShore[2] = 0;
               }
-              if(LITE) winCondition = winConLite(newMove);
-              if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
-              if (winCondition == true) {
-                  break;
+              else { //check if boat left or right : Right here
+                  //move animal
+                  newMove.leftShore[1] = newMove.leftShore[1] + 1;
+                  newMove.rightShore[1] = newMove.rightShore[1] - 1;
+                  //move boat
+                  newMove.rightShore[2] = 0;
+                  newMove.leftShore[2] = 1;
+              }
+              if (isValid(newMove)) {
+                  if (LITE) winCondition = winConLite(newMove);
+                  int size = returnArray[0].arrSize;
+                  returnArray = addNewItem(returnArray, newMove, currentMove, counter);
+                  int size2 = returnArray[0].arrSize;
+                  if (size < size2) {
+                      counter++;
+                  }
+                  //if (LITE) winCondition = winConLite(newMove);
+                  //if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+                  if (winCondition == true) {
+                      loop = false;
+                      //break;
+                  }
+              }
+
+              //}
+          }
+
+
+
+          //*********************chickandwolf 
+          if (chickandwolf(currentMove)) {
+              if (DEBUG) printf("SELECTING ONE WOLFS ONE CHICK\n");
+              //Make new move
+              item newMove = currentMove;
+              //if (DEBUG)  printf("\nPre change newMove new values in twochick is %d,%d\n", newMove.leftShore[0], newMove.rightShore[0]);
+              if (newMove.leftShore[2] == 1) { //check if boat left or right : Left here
+                  //move animal
+                  newMove.leftShore[1] = (newMove.leftShore[1] - 1);
+                  newMove.rightShore[1] = (newMove.rightShore[1] + 1);
+                  newMove.leftShore[0] = (newMove.leftShore[0] - 1);
+                  newMove.rightShore[0] = (newMove.rightShore[0] + 1);
+                  //move boat
+                  newMove.rightShore[2] = 1;
+                  newMove.leftShore[2] = 0;
+              }
+              else { //check if boat left or right : Right here
+                  //move animal
+                  newMove.leftShore[1] = newMove.leftShore[1] + 1;
+                  newMove.rightShore[1] = newMove.rightShore[1] - 1;
+                  newMove.leftShore[0] = newMove.leftShore[0] + 1;
+                  newMove.rightShore[0] = newMove.rightShore[0] - 1;
+                  //move boat
+                  newMove.rightShore[2] = 0;
+                  newMove.leftShore[2] = 1;
+              }
+              if (isValid(newMove)) {
+                  if (LITE) winCondition = winConLite(newMove);
+                  int size = returnArray[0].arrSize;
+                  returnArray = addNewItem(returnArray, newMove, currentMove, counter);
+                  int size2 = returnArray[0].arrSize;
+                  if (size < size2) {
+                      counter++;
+                  }
+                  //if(LITE) winCondition = winConLite(newMove);
+                  //if (HEAVY)winCondition = winCon(returnArray, returnArray[returnArray[0].arrSize]);//Checks win con from last added node.
+                  if (winCondition == true) {
+                      loop = false;
+                      //break;
+                  }
               }
           }
-      }
 
 
 
 
-      //loop breaker
-      if (winCondition != true) { // if the arrsize and loop size dont equal keep looping.
-          //if more loops need doing then set loop == true inc counter.
-          loop = true;
-          loopCounter++;
-      }
-      else {
-          loop = false; // if all bools are false then tree is complete.
-      }
+          //loop breaker
+          if (loop == true) { // if the arrsize and loop size dont equal keep looping.
+              //if more loops need doing then set loop == true inc counter.
+              loopCounter++;
+          }
+          else {
+              loop = false; // if all bools are false then tree is complete.
+          }
 
-      if (DEBUG) {
+          if (DEBUG) {
+              //emergency end condition.
+              if (loopCounter > 10000) {
+                  printf("10 counts met ending loop in failure.");
+                  loop = false;
+              }
+          }
+
           //emergency end condition.
-          if (loopCounter > 10000) {
-              printf("10 counts met ending loop in failure.");
+          if (loopCounter > 100000) {
+              printf("No solution found in 100000 nodes");
               loop = false;
           }
-      }
-
-
       
       
 
     
+      }else { loopCounter++; }//if didn't make value engine ++ array
 
   } // END OF WHILE LOOP
 
-  
+        
    return returnArray;
 }
 
